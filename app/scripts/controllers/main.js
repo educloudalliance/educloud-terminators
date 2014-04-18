@@ -7,4 +7,5 @@ angular.module('pilvivaylaTerminatorsApp')
       'AngularJS',
       'Karma'
     ];
+
   });

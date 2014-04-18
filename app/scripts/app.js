@@ -4,9 +4,10 @@ angular
   .module('pilvivaylaTerminatorsApp', [
     'ngCookies',
     'ngSanitize',
-	'ui.router'
+	'ui.router',
+  'mm.foundation'
   ])
-  .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+  .config(function ($stateProvider, $urlRouterProvider) {
   //http://scotch.io/tutorials/javascript/angular-routing-using-ui-router
   $urlRouterProvider.otherwise('/home');
 	//http://www.ng-newsletter.com/posts/angular-ui-router.html
@@ -46,5 +47,4 @@ angular
       .otherwise({
         redirectTo: '/'
       });*/
-    $locationProvider.html5Mode(true);
   });
