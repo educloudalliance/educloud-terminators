@@ -24,11 +24,11 @@ angular
             $scope.dogs = ['Bernese', 'Husky', 'Goldendoodle'];
         }
     })
-    .state('subjectt', {
-        url: '/subject',
+    .state('subject', {
+        url: '/subject/:subject',
         templateUrl: 'views/subject.html',
-        controller: function($scope) {
-            $scope.subject = ['Maths'];
+        controller: function($scope, $stateParams) {
+            $scope.subject = $stateParams.subject;
         }
     })
 

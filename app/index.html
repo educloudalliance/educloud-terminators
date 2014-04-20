@@ -27,7 +27,7 @@
     <nav class="top-bar" data-topbar>
       <ul class="title-area">
         <li class="name">
-          <h1><a href="#">My Site</a></h1>
+          <h1><a href="#">Pilviväylä</a></h1>
         </li>
         <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
       </ul>
@@ -43,25 +43,55 @@
             </ul>
           </li>
         </ul>
-
-        <!-- Left Nav Section -->
-        <ul class="left">
-          <li><a href="#">Left Nav Button</a></li>
-        </ul>
       </section>
     </nav>
-    <div class="medium-3 columns">
+    <div class="large-2 medium-3 columns" id="sidebar">
       <ul class="side-nav">
-        <li><a href="#">Link 1</a></li>
-        <li><a href="#">Link 2</a></li>
-        <li><a href="#">Link 3</a></li>
-        <li><a href="#">Link 4</a></li>
+        <li class="language subjects">
+          <ul>
+            <li><a href="#/subject/languages">Languages</a></li>
+          </ul>
+        </li>
+        <li class="science subjects">
+          <ul>
+            <li><a href="#/subject/biology">Biology</a></li>
+            <li><a href="#/subject/chemistry">Chemistry</a></li>
+            <li><a href="#/subject/geology">Geology</a></li>
+            <li><a href="#/subject/maths">Maths</a></li>
+            <li><a href="#/subject/physics">Physics</a></li>
+          </ul>
+        </li>
+        <li class="active subjects">
+          <ul>
+            <li><a href="#/subject/art">Art</a></li>
+            <li><a href="#/subject/crafts">Crafts</a></li>
+            <li><a href="#/subject/music">Music</a></li>
+            <li><a href="#/subject/it">IT</a></li>
+            <li><a href="#/subject/pe">P.E.</a></li>
+          </ul>
+        </li>
+        <li class="humanist subjects">
+          <ul>
+            <li><a href="#/subject/healt">Health Ed</a></li>
+            <li><a href="#/subject/history">History</a></li>
+            <li><a href="#/subject/philosophy">Philosophy</a></li>
+            <li><a href="#/subject/religion">Religion</a></li>
+          </ul>
+        </li>
       </ul>
     </div>
-    <div class="medium-9 columns">
+    <div class="large-10 medium-9 columns">
       <!-- Add your site or application content here -->
-      <div ui-view></div>
+      <div class="row">
+        <div class="medium-12 columns">
+          <div ui-view></div>
+        </div>
+      </div>
     </div>
+    <footer class="small-12 columns">
+      <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+    </div>
+
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>

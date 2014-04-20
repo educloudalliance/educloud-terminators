@@ -2,10 +2,10 @@
 
 angular.module('pilvivaylaTerminatorsApp')
   .controller('SubjectCtrl', function ($scope) {
-    $scope.subject = [
-    	// Stuff here
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+     $scope.postsCount = 15;
+	$scope.title = $scope.subject;
+	$scope.subcategories = [
+		'Division',
+		'Multiplying'
+	]
   });

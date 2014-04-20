@@ -1,15 +1,55 @@
 
 
 @import 'foundation/scss/foundation';
+@import 'settings';
 
 // bower:scss
 // endbower
 
+.row {
+    max-width: inherit;
+}
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
     color: #000;
     padding: 0.2em 0;
+}
+
+#sidebar {
+    padding-left: 0; 
+    .side-nav {
+        li {
+            margin: 0;
+            a {
+                font-size: 1.2rem;
+                border-bottom: 1px dotted #ddd;
+                color: #777;
+            }        
+        }
+        .subjects {
+            ul {
+                list-style: none;
+                border-left: 5px solid #ddd;
+                margin-left: 0;
+                a {
+                    padding: 0.2em 0.5em;
+                }
+            }
+            &.science ul{
+                border-color: #65B8E1;
+            }
+            &.language ul{
+                border-color: #45BB64;
+            }
+            &.active ul {
+                border-color: #D87B18;
+            }
+            &.humanist ul {
+                border-color: #976D59;
+            }
+        }
+    }
 }
 
 
