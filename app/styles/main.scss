@@ -1,10 +1,18 @@
+// The colors given by a designer
+$blue: #00aeef;
+$linkColor: #0093ca;
+$orange: #f60;
+$gray: #9aadb7;
+$black: #000;
+$mutedBlack: #333;
 
 
-@import 'foundation/scss/foundation';
-@import 'settings';
+@import 'foundation';
 
 // bower:scss
 // endbower
+
+
 
 .row {
     max-width: inherit;
@@ -15,7 +23,10 @@
     color: #000;
     padding: 0.2em 0;
 }
-
+.frontpage-buttons div {
+    padding: 1em;
+    background: $blue;
+}
 #sidebar {
     padding-left: 0; 
     .side-nav {
@@ -37,16 +48,16 @@
                 }
             }
             &.science ul{
-                border-color: #65B8E1;
+                border-color: $linkColor;
             }
             &.language ul{
-                border-color: #45BB64;
+                border-color: $blue;
             }
             &.active ul {
-                border-color: #D87B18;
+                border-color: $orange;
             }
             &.humanist ul {
-                border-color: #976D59;
+                border-color: $mutedBlack;
             }
         }
     }
