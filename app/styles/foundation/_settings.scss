@@ -11,7 +11,7 @@
 
 // Allows the use of rem-calc() or lower-bound() in your settings
 @import "../bower_components/foundation/scss/foundation/functions";
-
+$blue: #00aeef;
 // The default font-size is set to 100% of the browser style sheet (usually 16px)
 // for compatibility with browser-based text zoom or user-set defaults.
 
@@ -1166,6 +1166,7 @@ $primary-color: $blue;
 //
 
 // $include-html-top-bar-classes: $include-html-classes;
+
 
 // Background color for the top bar
 $topbar-bg-color: $blue;
