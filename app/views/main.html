@@ -1,19 +1,64 @@
 <div class="row">
-  <div class="medium-9 columns">
-    <div class="jumbotron">
-      <h1>'Allo, 'Allo!</h1>
-    </div>
-  </div>
-  <div class="medium-3 columns frontpage-buttons">
-    <div class="medium-12 columns">Image bank</div>
-    <div class="medium-12 columns">Magazine</div>
-    <div class="medium-12 columns">Your library</div>
+  <div class="small-12 columns header">
+    <h1>Welcome to the Bazaar!</h1>
+    <p>Found the learning material of your dreams</p>
   </div>
 </div>
 <div class="row">
+  <div class="medium-4 columns subjects" ng-mouseenter="subjectHover = true" ng-mouseleave="subjectHover = false">
+    <div class="subjectCover" ng-class="{coverCollapsed: subjectHover}"><h1>Subjects</h1></div>
+    <ul>
+      <li class="language subject">
+        <ul>
+          <li><a href="#/subject/languages">Languages</a></li>
+        </ul>
+      </li>
+      <li class="science subject">
+        <ul>
+          <li><a href="#/subject/biology">Biology</a></li>
+          <li><a href="#/subject/chemistry">Chemistry</a></li>
+          <li><a href="#/subject/geology">Geology</a></li>
+          <li><a href="#/maths">Maths</a></li>
+          <li><a href="#/subject/physics">Physics</a></li>
+        </ul>
+      </li>
+      <li class="active subject">
+        <ul>
+          <li><a href="#/subject/art">Art</a></li>
+          <li><a href="#/subject/crafts">Crafts</a></li>
+          <li><a href="#/subject/music">Music</a></li>
+          <li><a href="#/subject/it">IT</a></li>
+          <li><a href="#/subject/pe">P.E.</a></li>
+        </ul>
+      </li>
+      <li class="humanist subject">
+        <ul>
+          <li><a href="#/subject/healt">Health Ed</a></li>
+          <li><a href="#/subject/history">History</a></li>
+          <li><a href="#/subject/philosophy">Philosophy</a></li>
+          <li><a href="#/subject/religion">Religion</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="medium-6 columns magazine">
+    <div class="medium-12 columns">Magazine</div>
+  </div>
+  <div class="medium-2 columns">Resource bank</div>
+</div>
+<div class="row">
   <div class="medium-6 columns">
-    <h2>Collections</h2>
-    <p>Collections come here</p>
+    <h2>Newest collections</h2>
+    <ul>
+      <li>
+        <p>Globar warming</p>
+        <a>Authored by Sanna K.</a>
+      </li>
+      <li>
+        <p>Teaching media skills</p>
+        <a>Authored by Outi A.</a>
+      </li>
     <a ui-sref=".list" class="button primary">List</a>
   </div>
   <div class="medium-6 columns">

@@ -18,87 +18,94 @@
     <link rel="stylesheet" href="styles/main.css">
     <base href="/">
     <!-- endbuild -->
+    <link rel="stylesheet" href="/styles/iconfont/style.css">
   </head>
-  <body ng-app="pilvivaylaTerminatorsApp">
+  <body ng-app="pilvivaylaTerminatorsApp" ng-class="{navCollapsed: !hover}">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
-    <nav class="top-bar" data-topbar>
-      <ul class="title-area large-2 medium-3 columns">
-        <li class="name">
-          <h1><a href="#">Pilviväylä</a></h1>
-        </li>
-        <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+    <nav class="sidebar"
+     ng-mouseenter="hover = true"
+     ng-mouseleave="hover = false">
+      <ul>
+        <li><a href="#"><i class="icon-house"></i>Home</a></li>
+        <li><a href="#" class="active"><i class="icon-cloud"></i>Bazaar</a></li>
+        <li><a href="#"><i class="icon-help"></i>Q&A</a></li>
+        <li><a href="#"><i class="icon-book"></i>Magazine</a></li>
+        <li><a href="#"><i class="icon-support"></i>Support</a></li>
+        <li><a href="#"><i class="icon-user"></i>Account</a></li>
       </ul>
-
-      <section class="top-bar-section">
-        <!-- Right Nav Section -->
-        <ul class="left">
-          <li>
-            <form>
-              <input class="search" type="text" placeholder="Search...">
-            </form>
-          </li>
-        </ul>
-        <ul class="right">
-          <li class="has-dropdown">
-            <a>Ella the Teacher</a>
-            <ul class="dropdown">
-              <li><a href="#">Settings</a></li>
-              <li><a href="#">Log out</a></li>
-            </ul>
-          </li>
-        </ul>
-      </section>
     </nav>
-    <div class="large-2 medium-3 columns" id="sidebar">
-      <ul class="side-nav">
-        <li class="language subjects">
-          <ul>
-            <li><a href="#/subject/languages">Languages</a></li>
+    <div class="page"><!-- 
+      <nav class="top-bar" data-topbar>
+        <ul class="title-area large-2 medium-3 columns">
+          <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+        </ul>
+
+        <section class="top-bar-section">
+          <!-- Right Nav Section --><!--
+          <ul class="left">
+            <li>
+              <form>
+                <input class="search" type="text" placeholder="Search..." style="margin-left: 1em; margin-right: 1em;">
+              </form>
+            </li>
+            <li><span style="color: #eee; display: block; margin: 0.5em 1em 0;">Filter by:</span></li>
+            <li>
+              <form>
+                <select>
+                  <option>Class</option>
+                  <option>1st grade</option>
+                  <option>2nd grade</option>
+                  <option>3rd grade</option>
+                  <option>4th grade</option>
+                  <option>5th grade</option>
+                  <option>6th grade</option>
+                </select>
+              </form>
+            </li>
+            <li>
+              <form>
+                <select>
+                  <option>Device&Platform</option>
+                  <option>Tablets (both iPad & Android)</option>
+                  <option>just iPad</option>
+                  <option>just Android</option>
+                  <option>iPhone</option>
+                  <option>Android phones</option>
+                  <option>Windows Phone</option>
+                  <hr>
+                  <option>PC</option>
+                  <option>xBox</option>
+                  <option>Mac</option>
+                  <hr>
+                  <option>Moodle</option>
+                  <option>itslearning</option>
+                </select>
+              </form>
           </ul>
-        </li>
-        <li class="science subjects">
-          <ul>
-            <li><a href="#/subject/biology">Biology</a></li>
-            <li><a href="#/subject/chemistry">Chemistry</a></li>
-            <li><a href="#/subject/geology">Geology</a></li>
-            <li><a href="#/subject/maths">Maths</a></li>
-            <li><a href="#/subject/physics">Physics</a></li>
+          <ul class="right">
+            <li class="has-dropdown">
+              <a>Ella the Teacher</a>
+              <ul class="dropdown">
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Log out</a></li>
+              </ul>
+            </li>
           </ul>
-        </li>
-        <li class="active subjects">
-          <ul>
-            <li><a href="#/subject/art">Art</a></li>
-            <li><a href="#/subject/crafts">Crafts</a></li>
-            <li><a href="#/subject/music">Music</a></li>
-            <li><a href="#/subject/it">IT</a></li>
-            <li><a href="#/subject/pe">P.E.</a></li>
-          </ul>
-        </li>
-        <li class="humanist subjects">
-          <ul>
-            <li><a href="#/subject/healt">Health Ed</a></li>
-            <li><a href="#/subject/history">History</a></li>
-            <li><a href="#/subject/philosophy">Philosophy</a></li>
-            <li><a href="#/subject/religion">Religion</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    <div class="large-10 medium-9 columns">
-      <!-- Add your site or application content here -->
-      <div class="row">
-        <div class="medium-12 columns">
+        </section>
+      </nav>-->
+      
+      <!--<div class="medium-12 columns">-->
+        <!-- Add your site or application content here -->
+        <div>
+          <span class="search"><i class="icon-support"></i></span>
           <div ui-view></div>
         </div>
-      </div>
-    </div>
-    <footer class="small-12 columns">
-      <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-    </div>
 
+      <!--</div>-->
+
+    </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>

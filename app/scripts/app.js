@@ -27,12 +27,67 @@ angular
     .state('subject', {
         url: '/subject/:subject',
         templateUrl: 'views/subject.html',
-        controller: function($scope, $stateParams) {
-            $scope.subject = $stateParams.subject;
-        }
     })
-
-
+    .state('maths', {
+        url: '/maths',
+        templateUrl: 'views/maths.html',
+    })
+    .state('geometry', {
+        url: '/geometry',
+        templateUrl: 'views/geometry.html',
+    })
+    .state('account', {
+        url: '/account',
+        templateUrl: 'views/account.html',
+    })
+    .state('collection', {
+        url: '/collection',
+        templateUrl: 'views/collection.html',
+    })
+    .state('company', {
+        url: '/company',
+        templateUrl: 'views/company.html',
+    })
+    .state('item', {
+        url: '/item',
+        templateUrl: 'views/item.html',
+    })
+    .state('library', {
+        url: '/library',
+        templateUrl: 'views/library.html',
+    })
+    .state('magazine', {
+        url: '/magazine',
+        templateUrl: 'views/magazine.html',
+    })
+    .state('pilvivayla', {
+        url: '/pilvivayla',
+        templateUrl: 'views/pilvivayla.html',
+    })
+    .state('principal', {
+        url: '/principal',
+        templateUrl: 'views/principal.html',
+    })
+    .state('qa', {
+        url: '/qa',
+        templateUrl: 'views/qa.html',
+    })
+    .state('search', {
+        url: '/search',
+        templateUrl: 'views/search.html',
+    })
+    .state('subjects', {
+        url: '/subjects',
+        templateUrl: 'views/subjects.html',
+    })
+    .state('support', {
+        url: '/support',
+        templateUrl: 'views/support.html',
+    })
+    .state('teacher', {
+        url: '/teacher',
+        templateUrl: 'views/teacher.html',
+    })
 
     ;
 	/*$routeProvider
