@@ -1,70 +1,182 @@
-<div class="row">
-  <div class="small-12 columns header">
-    <h1>Welcome to the Bazaar!</h1>
-    <p>Found the learning material of your dreams</p>
-  </div>
-</div>
-<div class="row">
-  <div class="medium-4 columns subjects" ng-mouseenter="subjectHover = true" ng-mouseleave="subjectHover = false">
-    <div class="subjectCover" ng-class="{coverCollapsed: subjectHover}"><h1>Subjects</h1></div>
-    <ul>
-      <li class="language subject">
-        <ul>
-          <li><a href="#/subject/languages">Languages</a></li>
-        </ul>
-      </li>
-      <li class="science subject">
-        <ul>
-          <li><a href="#/subject/biology">Biology</a></li>
-          <li><a href="#/subject/chemistry">Chemistry</a></li>
-          <li><a href="#/subject/geology">Geology</a></li>
-          <li><a href="#/maths">Maths</a></li>
-          <li><a href="#/subject/physics">Physics</a></li>
-        </ul>
-      </li>
-      <li class="active subject">
-        <ul>
-          <li><a href="#/subject/art">Art</a></li>
-          <li><a href="#/subject/crafts">Crafts</a></li>
-          <li><a href="#/subject/music">Music</a></li>
-          <li><a href="#/subject/it">IT</a></li>
-          <li><a href="#/subject/pe">P.E.</a></li>
-        </ul>
-      </li>
-      <li class="humanist subject">
-        <ul>
-          <li><a href="#/subject/healt">Health Ed</a></li>
-          <li><a href="#/subject/history">History</a></li>
-          <li><a href="#/subject/philosophy">Philosophy</a></li>
-          <li><a href="#/subject/religion">Religion</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
+<div id="homePage">
+  <header class="small-12 columns header">
+    <hgroup>
+      <h1>Welcome to the Bazaar!</h1>
+      <h2>Find the learning material of your dreams</h2>
+    </hgroup>
+    <input class="search" placeholder="What are you looking for?" ng-model="selected" typeahead="subject for subject in subjects | filter:$viewValue | limitTo:8">
+  </header>
 
-  <div class="medium-6 columns magazine">
-    <div class="medium-12 columns">Magazine</div>
-  </div>
-  <div class="medium-2 columns">Resource bank</div>
-</div>
-<div class="row">
-  <div class="medium-6 columns">
-    <h2>Newest collections</h2>
-    <ul>
-      <li>
-        <p>Globar warming</p>
-        <a>Authored by Sanna K.</a>
-      </li>
-      <li>
-        <p>Teaching media skills</p>
-        <a>Authored by Outi A.</a>
-      </li>
-    <a ui-sref=".list" class="button primary">List</a>
-  </div>
-  <div class="medium-6 columns">
-    <h2>A video</h2>
-    <p>Something else comes here</p>
-  </div>
-  <div ui-view></div>
+<div>
+
+  <tabset>
+    <tab heading="Home">
+      <div class="row">
+        <div class="medium-6 columns">
+          <h2>Newest collections</h2>
+          <ul>
+            <li>
+              <p>Globar warming</p>
+              <a>Authored by Sanna K.</a>
+            </li>
+            <li>
+              <p>Teaching media skills</p>
+              <a>Authored by Outi A.</a>
+            </li>
+          </ul>
+          <a ui-sref=".list" class="button primary">List</a>
+        </div>
+        <div class="medium-6 columns">
+          <h2>A video</h2>
+          <p>Something else comes here</p>
+        </div>
+        <div ui-view></div>
+      </div>
+    </tab>
+    <tab heading="Subjects">
+         
+      <div class="row">
+        <div class="medium-7 columns subjects">
+
+          <div class="hex hex-3">   
+            <div class="inner">
+                <h4>Languages</h4>
+            </div>    
+            <a href="#"></a>
+            <div class="corner-1"></div>
+            <div class="corner-2"></div>    
+          </div>  
+
+          <div class="hex" style="background-image: url(images/2.jpg);">  
+            <h4>Maths</h4>  
+            <a href="#"></a>    
+            <div class="corner-1"></div>
+            <div class="corner-2"></div>    
+          </div>
+          <div class="hex" style="background-image: url(images/2.jpg);">
+            <h4>Environmental Sciences</h4>    
+            <a href="#"></a>    
+            <div class="corner-1"></div>
+            <div class="corner-2"></div>    
+          </div>
+
+          <br>
+
+          <div class="hex" style="background-image: url(images/2.jpg);">  
+          <h4>Biology</h4>   
+            <a href="#"></a>    
+            <div class="corner-1"></div>
+            <div class="corner-2"></div>    
+          </div>
+          <div class="hex" style="background-image: url(images/2.jpg);">
+          <h4>Geology</h4>     
+            <a href="#"></a>    
+            <div class="corner-1"></div>
+            <div class="corner-2"></div>    
+          </div>
+          <div class="hex" style="background-image: url(images/2.jpg);">    
+          <h4>Physics & Chemistry</h4> 
+            <a href="#"></a>    
+            <div class="corner-1"></div>
+            <div class="corner-2"></div>    
+          </div>
+          <div class="hex" style="background-image: url(images/2.jpg);">    
+          <h4>Health Sciences</h4> 
+            <a href="#"></a>    
+            <div class="corner-1"></div>
+            <div class="corner-2"></div>    
+          </div>
+              <br>
+          <div class="hex" style="background-image: url(images/2.jpg);">  
+          <h4>Religion</h4>   
+            <a href="#"></a>    
+            <div class="corner-1"></div>
+            <div class="corner-2"></div>    
+          </div>
+          <div class="hex" style="background-image: url(images/2.jpg);">   
+          <h4>Ethics</h4>  
+            <a href="#"></a>    
+            <div class="corner-1"></div>
+            <div class="corner-2"></div>    
+          </div>
+          <div class="hex" style="background-image: url(images/2.jpg);">  
+          <h4>Music</h4>   
+            <a href="#"></a>    
+            <div class="corner-1"></div>
+            <div class="corner-2"></div>    
+          </div>
+              <br>
+          <div class="hex" style="background-image: url(images/2.jpg);">  
+          <h4>Arts</h4>   
+            <a href="#"></a>    
+            <div class="corner-1"></div>
+            <div class="corner-2"></div>    
+          </div>
+          <div class="hex" style="background-image: url(images/2.jpg);">  
+          <h4>Crafts</h4>   
+            <a href="#"></a>    
+            <div class="corner-1"></div>
+            <div class="corner-2"></div>    
+          </div>
+          <div class="hex" style="background-image: url(images/2.jpg);">  
+          <h4>Physical Ed</h4>   
+            <a href="#"></a>    
+            <div class="corner-1"></div>
+            <div class="corner-2"></div>    
+          </div>
+          <div class="hex" style="background-image: url(images/2.jpg);">  
+          <h4>Domestic Sciences</h4>   
+            <a href="#"></a>    
+            <div class="corner-1"></div>
+            <div class="corner-2"></div>    
+          </div>
+          
+          <br>
+
+          <div class="hex" style="background-image: url(images/2.jpg);">    
+            <h4>Religion</h4>
+            <a href="#"></a>    
+            <div class="corner-1"></div>
+            <div class="corner-2"></div>    
+          </div>
+          <div class="hex" style="background-image: url(images/2.jpg);"> 
+            <h4>Philosophy</h4>   
+            <a href="#"></a>    
+            <div class="corner-1"></div>
+            <div class="corner-2"></div>    
+          </div>
+          <div class="hex" style="background-image: url(images/2.jpg);"> 
+          <h4>Crafts</h4>   
+            <a href="#"></a>    
+            <div class="corner-1"></div>
+            <div class="corner-2"></div>    
+          </div>
+         
+        </div>
+
+        <div class="medium-2 columns">Resource bank</div>
+      </div>
+    </tab>
+    <tab heading="Themes">
+      <div class="row">
+        <div class="small-12 columns">
+          <h2>Theme of the week:</h2>
+
+        </div>
+      </div>
+    </tab>
+    <tab heading="Creator's corner">
+      <h2>Image bank</h2>
+    </tab>
+    <tab heading="Teacher's desk">
+    </tab>
+    <!--<tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active">
+      {{tab.content}}
+    </tab>-->
+  </tabset>
+
 </div>
 
+
+
+</div>
