@@ -28,9 +28,9 @@ angular
         url: '/subject/:subject',
         templateUrl: 'views/subject.html',
     })
-    .state('maths', {
-        url: '/maths',
-        templateUrl: 'views/maths.html',
+    .state('music', {
+        url: '/music',
+        templateUrl: 'views/music.html',
     })
     .state('geometry', {
         url: '/geometry',

@@ -1,0 +1,68 @@
+$blue: #00aeef;
+$linkColor: #0093ca;
+$orange: #f60;
+$gray: #9aadb7;
+$black: #000;
+$mutedBlack: #333;
+ 
+.sidebar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 200px;
+	background: $blue;
+	box-shadow: 0 0 3px #222;
+	overflow-x: hidden;
+	overflow-y: auto;
+	overflow: hidden;
+	-moz-transition: width ease-in-out 0.28s, background linear 0.1s;
+	-webkit-transition: width ease-in-out 0.28s, background linear 0.1s;
+	-o-transition: width ease-in-out 0.28s, background linear 0.1s;
+	transition: width ease-in-out 0.28s, background linear 0.1s;
+	-ms-transform: translate(0px, 0);
+	-moz-transform: translate(0px, 0);
+	-webkit-transform: translate3d(0px, 0, 0);
+	transform: translate(0px, 0);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+
+	.navCollapsed &{
+		width: 50px;
+	}
+	ul {
+		list-style: none;
+		margin: 0;
+		width: 200px;
+
+		li a {
+			display: block;
+			color: #fff;
+			border-bottom: 1px solid #eee;
+			padding: 1em 0;
+			&:hover {
+				background: $mutedBlack;
+			}
+			&.active {
+				background: $mutedBlack;
+			}
+			i {
+				font-size: 1.6em;
+				display: block;
+				width: 2em;
+				float: left;
+				text-align: center;
+			}
+		}
+	}
+}
+.tabs dd > a {
+	background: #fff;
+	border-bottom: 2px solid #ddd;
+}
+#authorTab, #personalTab {
+	float: right;
+}

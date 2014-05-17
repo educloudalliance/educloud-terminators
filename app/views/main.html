@@ -1,182 +1,539 @@
 <div id="homePage">
-  <header class="small-12 columns header">
-    <hgroup>
-      <h1>Welcome to the Bazaar!</h1>
-      <h2>Find the learning material of your dreams</h2>
-    </hgroup>
-    <input class="search" placeholder="What are you looking for?" ng-model="selected" typeahead="subject for subject in subjects | filter:$viewValue | limitTo:8">
-  </header>
+	<header class="small-12 columns header">
+		<hgroup>
+			<h1>Welcome to the Bazaar!</h1>
+			<h2>Find the learning material of your dreams</h2>
+		</hgroup>
+		<input class="search" placeholder="What are you looking for?" ng-model="selected" typeahead="subject for subject in subjects | filter:$viewValue | limitTo:8">
+	</header>
 
-<div>
+	<tabset>
+		<tab heading="Home">
 
-  <tabset>
-    <tab heading="Home">
-      <div class="row">
-        <div class="medium-6 columns">
-          <h2>Newest collections</h2>
-          <ul>
-            <li>
-              <p>Globar warming</p>
-              <a>Authored by Sanna K.</a>
-            </li>
-            <li>
-              <p>Teaching media skills</p>
-              <a>Authored by Outi A.</a>
-            </li>
-          </ul>
-          <a ui-sref=".list" class="button primary">List</a>
-        </div>
-        <div class="medium-6 columns">
-          <h2>A video</h2>
-          <p>Something else comes here</p>
-        </div>
-        <div ui-view></div>
-      </div>
-    </tab>
-    <tab heading="Subjects">
-         
-      <div class="row">
-        <div class="medium-7 columns subjects">
+			<div class="row">
+					<h2>New arrivals</h2>
+					<ul class="item-list horizontal"> 
+						<li class="row">
+							<div class="medium-3 columns">
+								<a href="#/music" class="hex-item">
+									<div class="hex">   
+										<div class="inner">
+										</div>    
+										<div class="corner-1"></div>
+										<div class="corner-2"></div>
+									</div>
+								</a>
+							</div>
+							<div class="medium-9 columns">
+								<h3>The basics of Ukulele</h3>
+								<span class="author">Rockway</span>
+								<p>Tällä kurssilla käydään seikkaperäisesti läpi ukulelensoiton perusasioita.</p>
+							</div>
+						</li>
+						<li class="row">
+							<div class="medium-3 columns">
+								<a href="#/music" class="hex-item">
+									<div class="hex">   
+										<div class="inner">
+										</div>    
+										<div class="corner-1"></div>
+										<div class="corner-2"></div>
+									</div>
+								</a>
+							</div>
+							<div class="medium-9 columns">
+								<h3>GuitarBots</h3>
+								<span class="author">Ovelin</span>
+								<p>GuitarBots is an online game that makes guitar training more fun and motivating.</p>
+							</div>
+						</li>
+						<li class="row">
+							<div class="medium-3 columns">
+								<a href="#/music" class="hex-item">
+									<div class="hex">   
+										<div class="inner">
+										</div>    
+										<div class="corner-1"></div>
+										<div class="corner-2"></div>
+									</div>
+								</a>
+							</div>
+							<div class="medium-9 columns">
+								<h3>Geogebra</h3>
+								<span class="author">Geogebra</span>
+								<p>Ilmainen dynaaminen ohjelmisto matematiikan ja luonnontieteiden oppimisen ja opettamisen avuksi</p>
+							</div>
+						</li>
+						<li class="row">
+							<div class="medium-3 columns">
+								<a href="#/music" class="hex-item">
+									<div class="hex">   
+										<div class="inner">
+										</div>    
+										<div class="corner-1"></div>
+										<div class="corner-2"></div>
+									</div>
+								</a>
+							</div>
+							<div class="medium-9 columns">
+								<h3>Some item</h3>
+								<span class="author">Publisher</span>
+								<p>Asdasdasd</p>
+							</div>
+						</li>
+					</ul>
+			</div>
+			<div class="row">
+					<h2>Most liked in this month</h2>
+					<ul class="item-list horizontal"> 
+						<li class="row">
+							<div class="medium-3 columns">
+								<a href="#/music" class="hex-item">
+									<div class="hex">   
+										<div class="inner">
+										</div>    
+										<div class="corner-1"></div>
+										<div class="corner-2"></div>
+									</div>
+								</a>
+							</div>
+							<div class="medium-9 columns">
+								<h3>Some item</h3>
+								<span class="author">Publisher</span>
+								<p>Asdasdasd</p>
+							</div>
+						</li>
+						<li class="row">
+							<div class="medium-3 columns">
+								<a href="#/music" class="hex-item">
+									<div class="hex">   
+										<div class="inner">
+										</div>    
+										<div class="corner-1"></div>
+										<div class="corner-2"></div>
+									</div>
+								</a>
+							</div>
+							<div class="medium-9 columns">
+								<h3>Some item</h3>
+								<span class="author">Publisher</span>
+								<p>Asdasdasd</p>
+							</div>
+						</li>
+						<li class="row">
+							<div class="medium-3 columns">
+								<a href="#/music" class="hex-item">
+									<div class="hex">   
+										<div class="inner">
+										</div>    
+										<div class="corner-1"></div>
+										<div class="corner-2"></div>
+									</div>
+								</a>
+							</div>
+							<div class="medium-9 columns">
+								<h3>Some item</h3>
+								<span class="author">Publisher</span>
+								<p>Asdasdasd</p>
+							</div>
+						</li>
+						<li class="row">
+							<div class="medium-3 columns">
+								<a href="#/music" class="hex-item">
+									<div class="hex">   
+										<div class="inner">
+										</div>    
+										<div class="corner-1"></div>
+										<div class="corner-2"></div>
+									</div>
+								</a>
+							</div>
+							<div class="medium-9 columns">
+								<h3>Some item</h3>
+								<span class="author">Publisher</span>
+								<p>Asdasdasd</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="row">
+						<h2>This week at Cloudclub</h2>
+						<ul class="item-list horizontal"> 
+							<li class="row">
+								<div class="medium-3 columns">
+									<a href="#/music" class="hex-item">
+										<div class="hex">   
+											<div class="inner">
+											</div>    
+											<div class="corner-1"></div>
+											<div class="corner-2"></div>
+										</div>
+									</a>
+								</div>
+								<div class="medium-9 columns">
+									<h3>Some item</h3>
+									<span class="author">Publisher</span>
+									<p>Asdasdasd</p>
+								</div>
+							</li>
+							<li class="row">
+								<div class="medium-3 columns">
+									<a href="#/music" class="hex-item">
+										<div class="hex">   
+											<div class="inner">
+											</div>    
+											<div class="corner-1"></div>
+											<div class="corner-2"></div>
+										</div>
+									</a>
+								</div>
+								<div class="medium-9 columns">
+									<h3>Some item</h3>
+									<span class="author">Publisher</span>
+									<p>Asdasdasd</p>
+								</div>
+							</li>
+							<li class="row">
+								<div class="medium-3 columns">
+									<a href="#/music" class="hex-item">
+										<div class="hex">   
+											<div class="inner">
+											</div>    
+											<div class="corner-1"></div>
+											<div class="corner-2"></div>
+										</div>
+									</a>
+								</div>
+								<div class="medium-9 columns">
+									<h3>Some item</h3>
+									<span class="author">Publisher</span>
+									<p>Asdasdasd</p>
+								</div>
+							</li>
+							<li class="row">
+								<div class="medium-3 columns">
+									<a href="#/music" class="hex-item">
+										<div class="hex">   
+											<div class="inner">
+											</div>    
+											<div class="corner-1"></div>
+											<div class="corner-2"></div>
+										</div>
+									</a>
+								</div>
+								<div class="medium-9 columns">
+									<h3>Some item</h3>
+									<span class="author">Publisher</span>
+									<p>Asdasdasd</p>
+								</div>
+							</li>
+						</ul>
+					<div ui-view></div>
+				</div>
+		</tab>
+		<tab heading="Subjects">
+			<div class="medium-12 columns subjects">
+					<div class="small-6 columns">
+						<div class="subject-group">
+							<h2>Languages</h2>
+							<a href="#" class="hex-item">
+								<div class="hex hex-3">   
+									<div class="inner">
+									</div>    
+									<div class="corner-1"></div>
+									<div class="corner-2"></div>    
+								</div> 
+								<h3>Finnish</h3>
+							</a>
+							<a href="#" class="hex-item">
+								<div class="hex hex-3">   
+									<div class="inner">
+									</div>    
+									<div class="corner-1"></div>
+									<div class="corner-2"></div>    
+								</div> 
+								<h3>English</h3>
+							</a>
+							<a href="#" class="hex-item">
+								<div class="hex hex-3">   
+									<div class="inner">
+									</div>    
+									<div class="corner-1"></div>
+									<div class="corner-2"></div>    
+								</div> 
+								<h3>Swedish</h3>
+							</a>
+							<a href="#" class="hex-item">
+								<div class="hex hex-3">   
+									<div class="inner">
+									</div>    
+									<div class="corner-1"></div>
+									<div class="corner-2"></div>    
+								</div> 
+								<h3>Other languages</h3>
+							</a>
+						</div>
 
-          <div class="hex hex-3">   
-            <div class="inner">
-                <h4>Languages</h4>
-            </div>    
-            <a href="#"></a>
-            <div class="corner-1"></div>
-            <div class="corner-2"></div>    
-          </div>  
 
-          <div class="hex" style="background-image: url(images/2.jpg);">  
-            <h4>Maths</h4>  
-            <a href="#"></a>    
-            <div class="corner-1"></div>
-            <div class="corner-2"></div>    
-          </div>
-          <div class="hex" style="background-image: url(images/2.jpg);">
-            <h4>Environmental Sciences</h4>    
-            <a href="#"></a>    
-            <div class="corner-1"></div>
-            <div class="corner-2"></div>    
-          </div>
-
-          <br>
-
-          <div class="hex" style="background-image: url(images/2.jpg);">  
-          <h4>Biology</h4>   
-            <a href="#"></a>    
-            <div class="corner-1"></div>
-            <div class="corner-2"></div>    
-          </div>
-          <div class="hex" style="background-image: url(images/2.jpg);">
-          <h4>Geology</h4>     
-            <a href="#"></a>    
-            <div class="corner-1"></div>
-            <div class="corner-2"></div>    
-          </div>
-          <div class="hex" style="background-image: url(images/2.jpg);">    
-          <h4>Physics & Chemistry</h4> 
-            <a href="#"></a>    
-            <div class="corner-1"></div>
-            <div class="corner-2"></div>    
-          </div>
-          <div class="hex" style="background-image: url(images/2.jpg);">    
-          <h4>Health Sciences</h4> 
-            <a href="#"></a>    
-            <div class="corner-1"></div>
-            <div class="corner-2"></div>    
-          </div>
-              <br>
-          <div class="hex" style="background-image: url(images/2.jpg);">  
-          <h4>Religion</h4>   
-            <a href="#"></a>    
-            <div class="corner-1"></div>
-            <div class="corner-2"></div>    
-          </div>
-          <div class="hex" style="background-image: url(images/2.jpg);">   
-          <h4>Ethics</h4>  
-            <a href="#"></a>    
-            <div class="corner-1"></div>
-            <div class="corner-2"></div>    
-          </div>
-          <div class="hex" style="background-image: url(images/2.jpg);">  
-          <h4>Music</h4>   
-            <a href="#"></a>    
-            <div class="corner-1"></div>
-            <div class="corner-2"></div>    
-          </div>
-              <br>
-          <div class="hex" style="background-image: url(images/2.jpg);">  
-          <h4>Arts</h4>   
-            <a href="#"></a>    
-            <div class="corner-1"></div>
-            <div class="corner-2"></div>    
-          </div>
-          <div class="hex" style="background-image: url(images/2.jpg);">  
-          <h4>Crafts</h4>   
-            <a href="#"></a>    
-            <div class="corner-1"></div>
-            <div class="corner-2"></div>    
-          </div>
-          <div class="hex" style="background-image: url(images/2.jpg);">  
-          <h4>Physical Ed</h4>   
-            <a href="#"></a>    
-            <div class="corner-1"></div>
-            <div class="corner-2"></div>    
-          </div>
-          <div class="hex" style="background-image: url(images/2.jpg);">  
-          <h4>Domestic Sciences</h4>   
-            <a href="#"></a>    
-            <div class="corner-1"></div>
-            <div class="corner-2"></div>    
-          </div>
-          
-          <br>
-
-          <div class="hex" style="background-image: url(images/2.jpg);">    
-            <h4>Religion</h4>
-            <a href="#"></a>    
-            <div class="corner-1"></div>
-            <div class="corner-2"></div>    
-          </div>
-          <div class="hex" style="background-image: url(images/2.jpg);"> 
-            <h4>Philosophy</h4>   
-            <a href="#"></a>    
-            <div class="corner-1"></div>
-            <div class="corner-2"></div>    
-          </div>
-          <div class="hex" style="background-image: url(images/2.jpg);"> 
-          <h4>Crafts</h4>   
-            <a href="#"></a>    
-            <div class="corner-1"></div>
-            <div class="corner-2"></div>    
-          </div>
-         
-        </div>
-
-        <div class="medium-2 columns">Resource bank</div>
-      </div>
-    </tab>
-    <tab heading="Themes">
-      <div class="row">
-        <div class="small-12 columns">
-          <h2>Theme of the week:</h2>
-
-        </div>
-      </div>
-    </tab>
-    <tab heading="Creator's corner">
-      <h2>Image bank</h2>
-    </tab>
-    <tab heading="Teacher's desk">
-    </tab>
-    <!--<tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active">
-      {{tab.content}}
-    </tab>-->
-  </tabset>
-
-</div>
+						<div class="subject-group">
+							<h2>Active & Creative</h2>
+							<a href="#/music" class="hex-item">
+								<div class="hex hex-3">   
+									<div class="inner">
+									</div>    
+									<div class="corner-1"></div>
+									<div class="corner-2"></div>    
+								</div> 
+								<h3>Music </h3>
+							</a>
+							<a href="#" class="hex-item">
+								<div class="hex hex-3">   
+									<div class="inner">
+									</div>    
+									<div class="corner-1"></div>
+									<div class="corner-2"></div>    
+								</div> 
+								<h3>Arts</h3>
+							</a>
+							<a href="#" class="hex-item">
+								<div class="hex hex-3">   
+									<div class="inner">
+									</div>    
+									<div class="corner-1"></div>
+									<div class="corner-2"></div>    
+								</div> 
+								<h3>Crafts</h3>
+							</a>
+							<a href="#" class="hex-item">
+								<div class="hex hex-3">   
+									<div class="inner">
+									</div>    
+									<div class="corner-1"></div>
+									<div class="corner-2"></div>    
+								</div> 
+								<h3>Domestic Science</h3>
+							</a>
+							<a href="#" class="hex-item">
+								<div class="hex hex-3">   
+									<div class="inner">
+									</div>    
+									<div class="corner-1"></div>
+									<div class="corner-2"></div>    
+								</div> 
+								<h3>P.E.</h3>
+							</a>
+							<a href="#" class="hex-item">
+								<div class="hex hex-3">   
+									<div class="inner">
+									</div>    
+									<div class="corner-1"></div>
+									<div class="corner-2"></div>    
+								</div> 
+								<h3>Health science</h3>
+							</a>
 
 
+						</div>
+					</div>
+					<div class="small-6 columns">
 
-</div>
+						<div class="subject-group">
+							<h2>Natural Sciences</h2>
+							<a href="#" class="hex-item">
+								<div class="hex hex-3">   
+									<div class="inner">
+									</div>    
+									<div class="corner-1"></div>
+									<div class="corner-2"></div>    
+								</div> 
+								<h3>Mathematics</h3>
+							</a>
+							<a href="#" class="hex-item">
+								<div class="hex hex-3">   
+									<div class="inner">
+									</div>    
+									<div class="corner-1"></div>
+									<div class="corner-2"></div>    
+								</div> 
+								<h3>Physics</h3>
+							</a>
+							<a href="#" class="hex-item">
+								<div class="hex hex-3">   
+									<div class="inner">
+									</div>    
+									<div class="corner-1"></div>
+									<div class="corner-2"></div>    
+								</div> 
+								<h3>Chemistry</h3>
+							</a>
+							<a href="#" class="hex-item">
+								<div class="hex hex-3">   
+									<div class="inner">
+									</div>    
+									<div class="corner-1"></div>
+									<div class="corner-2"></div>    
+								</div> 
+								<h3>Biology</h3>
+							</a>
+							<a href="#" class="hex-item">
+								<div class="hex hex-3">   
+									<div class="inner">
+									</div>    
+									<div class="corner-1"></div>
+									<div class="corner-2"></div>    
+								</div> 
+								<h3>Geology</h3>
+							</a>
+							<a href="#" class="hex-item">
+								<div class="hex hex-3">   
+									<div class="inner">
+									</div>    
+									<div class="corner-1"></div>
+									<div class="corner-2"></div>    
+								</div> 
+								<h3>Environmental Sciences</h3>
+							</a>
+						</div>
+						<div class="subject-group">
+							<h2>Humanics</h2>
+							<a href="#" class="hex-item">
+								<div class="hex hex-3">   
+									<div class="inner">
+									</div>    
+									<div class="corner-1"></div>
+									<div class="corner-2"></div>    
+								</div> 
+								<h3>History</h3>
+							</a>
+							<a href="#" class="hex-item">
+								<div class="hex hex-3">   
+									<div class="inner">
+									</div>    
+									<div class="corner-1"></div>
+									<div class="corner-2"></div>    
+								</div> 
+								<h3>Religion</h3>
+							</a>
+							<a href="#" class="hex-item">
+								<div class="hex hex-3">   
+									<div class="inner">
+									</div>    
+									<div class="corner-1"></div>
+									<div class="corner-2"></div>    
+								</div> 
+								<h3>Ethics</h3>
+							</a>
+							<a href="#" class="hex-item">
+								<div class="hex hex-3">   
+									<div class="inner">
+									</div>    
+									<div class="corner-1"></div>
+									<div class="corner-2"></div>    
+								</div> 
+								<h3>Society knowledge</h3>
+							</a>
+						</div>
+					</div>
+				</div>
+		</tab>
+		<tab heading="Themes">
+			<div class="row">
+				<div class="small-4 columns">
+					<h2>Theme of the week:</h2>
+					<div style="height: 300px; background: #ddd"></div>
+					<h3>Learning the roads</h3>
+					<p>How traffic works? What to keep in mind when cycling?</p>
+				</div>
+				<div class="small-4 columns">
+					<ul class="item-list"> 
+						<li class="row">
+							<div class="medium-3 columns">
+								<a href="#/music" class="hex-item">
+									<div class="hex">   
+										<div class="inner">
+										</div>    
+										<div class="corner-1"></div>
+										<div class="corner-2"></div>
+									</div>
+								</a>
+							</div>
+							<div class="medium-9 columns">
+								<h3>Alcohol</h3>
+								<p>Alcohol is a chemical that has many effects to the human body. Learn the math involved and how it works in the body.</p>
+							</div>
+						</li>
+						<li class="row">
+							<div class="medium-3 columns">
+								<a href="#/music" class="hex-item">
+									<div class="hex">   
+										<div class="inner">
+										</div>    
+										<div class="corner-1"></div>
+										<div class="corner-2"></div>
+									</div>
+								</a>
+							</div>
+							<div class="medium-9 columns">
+								<h3>Global warming</h3>
+								<p>Global warming have effects to both economy and nature. Learn about it!</p>
+							</div>
+						</li>
+						<li class="row">
+							<div class="medium-3 columns">
+								<a href="#/music" class="hex-item">
+									<div class="hex">   
+										<div class="inner">
+										</div>    
+										<div class="corner-1"></div>
+										<div class="corner-2"></div>
+									</div>
+								</a>
+							</div>
+							<div class="medium-9 columns">
+								<h3>Geogebra</h3>
+								<span class="author">Geogebra</span>
+								<p>Ilmainen dynaaminen ohjelmisto matematiikan ja luonnontieteiden oppimisen ja opettamisen avuksi</p>
+							</div>
+						</li>
+						<li class="row">
+							<div class="medium-3 columns">
+								<a href="#/music" class="hex-item">
+									<div class="hex">   
+										<div class="inner">
+										</div>    
+										<div class="corner-1"></div>
+										<div class="corner-2"></div>
+									</div>
+								</a>
+							</div>
+							<div class="medium-9 columns">
+								<h3>Some item</h3>
+								<span class="author">Publisher</span>
+								<p>Asdasdasd</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		</tab>
+		<tab heading="Creator's corner" id="authorTab">
+			<h2>Image bank</h2>
+		</tab>
+		<tab heading="Teacher's desk" id="personalTab">
+		</tab>
+		<!--<tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active">
+			{{tab.content}}
+		</tab>-->
+	</tabset>
+
+	<script>
+		$(document).ready(function() {
+			$("#owl-demo").owlCarousel({
+					autoPlay: 3000, //Set AutoPlay to 3 seconds
+					items : 4,
+					itemsDesktop : [1199,3],
+					itemsDesktopSmall : [979,3]
+			});
+		});
+	</script>
