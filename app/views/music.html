@@ -1,5 +1,5 @@
 <div ng-controller="SubjectCtrl" id="subjectPage">
-	<header class="row">
+	<header>
 		<img class="header-image" src="images/drums_130.jpg"  height="130">
 		<div class="small-1 columns back">
 			<a href="#/home"><i class="icon-arrow-left"></i></a>
@@ -10,47 +10,274 @@
 		</div>
 		<div class="small-3 columns">
 			<input type="text" placeholder="Search within music..">
-			<a>Filters..</a>
 		</div>
 	</header>
+	  
+	<div id="filters" ng-show="collapse">
+		<div class="row">
+			<div class="medium-4 columns">
+				<h4>Grade</h4>
+				<div class="button-bar">
+			     <ul class="button-group round">
+					  <li><a href="#" class="button">1</a></li>
+					  <li><a href="#" class="button">2</a></li>
+					  <li><a href="#" class="button">3</a></li>
+					  <li><a href="#" class="button">4</a></li>
+					  <li><a href="#" class="button">5</a></li>
+					  <li><a href="#" class="button">6</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="medium-4 columns">
+				<h4>Type</h4>
+				<select>
+					<option>Games</option>
+					<option>Tools</option>
+					<option>Audio</option>
+					<option>Pictures</option>
+					<option>Scores</option>
+					<option>Animations</option>
+					<option>Videos</option>
+					<option>Courses</option>
+				</select>
+			</div>
+			<div class="medium-4 columns">
+				<h4>Price</h4>
+				<div class="range-slider" data-slider>
+				  <span class="range-slider-handle"></span>
+				  <span class="range-slider-active-segment"></span>
+				  <input type="hidden">
+				</div>
+				<input type="checkbox">Free
+
+			</div>
+		</div>
+  </div>
 	<tabset>
 		<tab heading="Home">
-
-			<div class="row">
 				<div class="medium-8 columns">
-					<div style="height: 30em; margin-bottom: 1em; overflow: hidden">
+					<div style="height: 30em; margin-bottom: 1em; overflow: hidden; background: #eee;">
 						<img src="http://ovelin.com/wp-content/uploads/2013/04/GB_SocialProfile01.jpeg">
 					</div>
 					<div class="row">
-						<div class="medium-6 columns">
-							<div style="background: #eee; height: 30em; margin-bottom: 1em;">Popular materials</div>
-						</div>
+						<ul class="item-list horizontal simple"> 
+							<h2 class="small-12 columns">New arrivals</h2>							
+							<li class="row">
+								<div class="medium-12 columns">
+									<a href="#/music" class="hex-item">
+										<div class="hex">   
+											<div class="inner">
+											</div>    
+											<div class="corner-1"></div>
+											<div class="corner-2"></div>
+										</div>
+									</a>
+								</div>
+								<div class="medium-12 columns">
+									<h3>The basics of Ukulele</h3>
+									<span class="author">Rockway</span>
+								</div>
+							</li>
+							<li class="row">
+								<div class="medium-12 columns">
+									<a href="#/music" class="hex-item">
+										<div class="hex">   
+											<div class="inner">
+											</div>    
+											<div class="corner-1"></div>
+											<div class="corner-2"></div>
+										</div>
+									</a>
+								</div>
+								<div class="medium-12 columns">
+									<h3>GuitarBots</h3>
+									<span class="author">Ovelin</span>
+								</div>
+							</li>
+							<li class="row">
+								<div class="medium-12 columns">
+									<a href="#/music" class="hex-item">
+										<div class="hex">   
+											<div class="inner">
+											</div>    
+											<div class="corner-1"></div>
+											<div class="corner-2"></div>
+										</div>
+									</a>
+								</div>
+								<div class="medium-12 columns">
+									<h3>Geogebra</h3>
+									<span class="author">Geogebra</span>
+								</div>
+							</li>
+							<li class="row">
+								<div class="medium-12 columns">
+									<a href="#/music" class="hex-item">
+										<div class="hex">   
+											<div class="inner">
+											</div>    
+											<div class="corner-1"></div>
+											<div class="corner-2"></div>
+										</div>
+									</a>
+								</div>
+								<div class="medium-12 columns">
+									<h3>Some item</h3>
+									<span class="author">Publisher</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="row">
+						<ul class="item-list horizontal simple"> 
+							<h2 class="small-12 columns">Most downloaded</h2>							
+							<li class="row">
+								<div class="medium-12 columns">
+									<a href="#/music" class="hex-item">
+										<div class="hex">   
+											<div class="inner">
+											</div>    
+											<div class="corner-1"></div>
+											<div class="corner-2"></div>
+										</div>
+									</a>
+								</div>
+								<div class="medium-12 columns">
+									<h3>The basics of Ukulele</h3>
+									<span class="author">Rockway</span>
+								</div>
+							</li>
+							<li class="row">
+								<div class="medium-12 columns">
+									<a href="#/music" class="hex-item">
+										<div class="hex">   
+											<div class="inner">
+											</div>    
+											<div class="corner-1"></div>
+											<div class="corner-2"></div>
+										</div>
+									</a>
+								</div>
+								<div class="medium-12 columns">
+									<h3>GuitarBots</h3>
+									<span class="author">Ovelin</span>
+								</div>
+							</li>
+							<li class="row">
+								<div class="medium-12 columns">
+									<a href="#/music" class="hex-item">
+										<div class="hex">   
+											<div class="inner">
+											</div>    
+											<div class="corner-1"></div>
+											<div class="corner-2"></div>
+										</div>
+									</a>
+								</div>
+								<div class="medium-12 columns">
+									<h3>forScore</h3>
+									<span class="author">forScore</span>
+								</div>
+							</li>
+							<li class="row">
+								<div class="medium-12 columns">
+									<a href="#/music" class="hex-item">
+										<div class="hex">   
+											<div class="inner">
+											</div>    
+											<div class="corner-1"></div>
+											<div class="corner-2"></div>
+										</div>
+									</a>
+								</div>
+								<div class="medium-12 columns">
+									<h3>Some item</h3>
+									<span class="author">Publisher</span>
+								</div>
+							</li>
+						</ul>
 					</div>
 				</div>
-				<div class="medium-4 columns">
-					<div class="row">
-							
-						 
-							<div class="medium-12 columns">
-								<h4>Latest blog posts related to Music</h4>
-								<ul class="post-list">
-									<li></li>
-									<li></li>
-									<li></li>
-									<li></li>
-								</ul>
-								<h4>Discussions under Music</h4>
-								<ul class="post-list">
-									<li></li>
-									<li></li>
-									<li></li>
-									<li></li>
-								</ul>
-							</div>
+				<div class="medium-4 columns right-col">
+					<section>
+						<h3>Latest blog posts related to Music</h3>
+						<ul class="post-list">
+							<li>
+								<a href="#">
+									<img src="images/post-image.jpg" class="small-3 columns">
+									<div class="small-9 columns">
+										<h4>Using Rockway courses in 4th grade music teaching</h4>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="images/post-image.jpg" class="small-3 columns">
+									<div class="small-9 columns">
+										<h4>iPad band in the Spring event - the story of our practise</h4>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="images/post-image.jpg" class="small-3 columns">
+									<div class="small-9 columns">
+										<h4>From zero to Paranoid - How did 6th graders learned to play a song by themselves</h4>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<a href="#" class="button small right">Go to the magazine</a>
+					</section>
 
-						</div>
+					<section>
+						<h3>Recent discussions under Music</h3>
+						<ul class="post-list comments">
+							<li>
+								<a href="#">
+										How to go through the student composed music in the classroom?</a>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+										Expert guitar players in the class. How have you dealt with different skill levels?
+								</a>
+							</li>
+							<li>
+								<a href="#">
+										Apps that help with bands in the class
+								</a>
+							</li>
+							<li>
+								<a href="#">
+										Haven't found any suitable app for teaching different percussion. Any thoughts? 
+								</a>
+							</li>
+						</ul>
+						<a href="#" class="button small">Add a new discussion</a><a href="#" class="button small right">Go to the forum</a>
+					</section>
+					<section>
+						<h3>Latest reviews</h3>
+						<ul class="post-list">
+							<li>
+								<span class="item-title">App name</span>
+								<a href="#">Excellent too but lacks group features</a>
+								<span class="stars"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span>
+							</li>
+							<li>
+								<span class="item-title">App name</span>
+								<a href="#">If you want to teach your classroom guitar, use this!</a>
+								<span class="stars"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span>
+							</li>
+							<li>
+								<span class="item-title">App name</span>
+								<a href="#">Not worth the money.</a>
+								<span class="stars"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span>
+							</li>
+						</ul>
+					</section>
+
 				</div>
-			</div>
 		</tab>
 		<tab heading="Topics">
 			<div class="medium-6 columns theme">
@@ -74,6 +301,14 @@
 					 Listening
 				 </div>
 			</div>
+		</tab>
+		<tab heading="Tags">
+		</tab>
+		<tab heading="Filters">
+		</tab>
+		<tab heading="Forum">
+		</tab>
+		<tab heading="Your bookmarks" class="right">
 		</tab>
 
 </div>

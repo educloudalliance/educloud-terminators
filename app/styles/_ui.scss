@@ -26,10 +26,50 @@
 			float: left;
 			width: 30%;
 		}
+		&.simple {
+			height: 264px;
+			li {
+				border-bottom: none;
+				.hex {
+					width: 101px;
+					height: 57px;
+				}
+				width: 20%;
+			}
+		}
 	}
 }
 .post-list {
-
+	list-style: none;
+	margin-left: 0;
+	li {
+		padding: 1em 0;
+		border-bottom: 1px dotted #ddd;
+		a {
+			font-size: 1.2em;
+			display: block;
+			overflow: hidden;
+		}
+		i {
+			font-size: 2em;
+		}
+	}
+	img {
+		//border: 1px solid #ddd;
+	}
+	&.comments {
+		li {
+			border-bottom: none;
+			margin-bottom: 0.2em;
+			padding: 0;
+			a {
+				font-size: 1em;
+				background: #eee;
+				padding: 1em;
+				color: #555;
+			}
+		}
+	}
 }
 
 

@@ -67,6 +67,12 @@ $mutedBlack: #333;
 	background: #fff;
 	border-bottom: 2px solid #ddd;
 }
+.tabs dd.active a {
+	background: #ddd !important;
+}
 #authorTab, #personalTab {
 	float: right;
+}
+.tabs {
+	margin-bottom: 1em !important;
 }
