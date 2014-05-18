@@ -1,0 +1,65 @@
+// Item page related css
+
+#itemPage {
+
+	.search {
+		position: absolute;
+		top: 1em;
+		right: 1em;
+		font-size: 2em;
+	}
+	.background {
+		background: #DBDBDB;
+	}
+	header {
+		padding: 3em 0 5em;
+		margin-bottom: 3em;
+		h1 {
+			color: #777;
+			margin-bottom: 0;
+		}
+		.rating, .specs {
+			color: #777;
+		}
+	}
+
+	.toprow {
+		//margin-bottom: 2em;
+		padding-bottom: 2em;
+		.item-picture {
+			background: url("http://upload.wikimedia.org/wikipedia/commons/2/24/Gorilla_gorilla11.jpg"); 
+			height: 23em;
+			border-radius: 3px;
+			margin-bottom: 2em;
+		}
+
+		ul {
+			padding: 1em;
+			
+			border-radius: 3px;
+			list-style-type: none;
+			margin-left: 0;
+			background: lighten($blue, 30%);
+			border: 1px solid #fff;
+			li {
+				 color: #888;
+			}
+		}
+	}
+	aside {
+		h3 {
+			border-bottom: 1px solid #aaa;
+		}
+		p {
+			font-size: 1.2em;
+			//padding: 1em;
+			color: #444;
+		}
+	}
+	.left-col {
+		padding-top: 2em;
+		padding-bottom: 2em;
+		border-right: 2px solid $blue;
+		background: #EFF7FF;
+	}
+}

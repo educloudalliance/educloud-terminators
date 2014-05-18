@@ -5,6 +5,19 @@ $gray: #9aadb7;
 $black: #000;
 $mutedBlack: #333;
  
+
+
+.page {
+	@include transform(translate(150px, 0));
+	@include transition(transform(0.28s, ease-in-out));
+	padding: 0;
+	background: #fff;
+
+	.navCollapsed & {
+		@include transform(translate(0px, 0));
+	}
+}
+
 .sidebar {
 	position: fixed;
 	top: 0;
@@ -16,21 +29,12 @@ $mutedBlack: #333;
 	overflow-x: hidden;
 	overflow-y: auto;
 	overflow: hidden;
-	-moz-transition: width ease-in-out 0.28s, background linear 0.1s;
-	-webkit-transition: width ease-in-out 0.28s, background linear 0.1s;
-	-o-transition: width ease-in-out 0.28s, background linear 0.1s;
-	transition: width ease-in-out 0.28s, background linear 0.1s;
-	-ms-transform: translate(0px, 0);
-	-moz-transform: translate(0px, 0);
-	-webkit-transform: translate3d(0px, 0, 0);
-	transform: translate(0px, 0);
+	@include transition(width ease-in-out 0.28s, background linear 0.1s);
+	@include transform(translate(0px, 0));
 	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	-o-user-select: none;
-
-	.navCollapsed &{
+	@include user-select(none);
+	
+	.navCollapsed & {
 		width: 50px;
 	}
 	ul {
