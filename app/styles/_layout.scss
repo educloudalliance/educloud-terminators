@@ -10,7 +10,9 @@ body {
 .row {
    max-width: 1300px;
 }
-
+section {
+	@extend .clearfix;
+}
 header {
 	padding: 2em 0;
 

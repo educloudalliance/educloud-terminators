@@ -1,8 +1,11 @@
 // Ui-components
-
+i {
+	margin-right: 0.5em;
+}
 // Lists
 .item-list {
 	list-style: none;
+	margin-left: 0;
 	li {
 		padding: 1em 0;
 		border-bottom: 1px dotted #ddd;
@@ -13,6 +16,13 @@
 		height: 45px;
 	}
 	h3 {
+		margin: 0;
+	}
+	.author {
+		top: -0.4em;
+		position: relative;
+	}
+	p {
 		margin-bottom: 0;
 	}
 	.hex-item{
@@ -80,7 +90,7 @@
 	}
 	.caption {
 		position: absolute;
-		bottom: 8px;
+		bottom: 0;
 		left: 0;
 		background: rgba(255,255,255,0.95);
 		width: 100%;
@@ -144,20 +154,20 @@
 	float: left;
 	text-align: center;
 	margin-bottom: 2em;
-	max-width: 120px;
+	max-width: 150px;
 	margin-right: 0.3em;
 	.hex {
 		margin-bottom: 3em; 
 	} 
 }
-
+/*
 .hex {
 	display: inline-block;
 	vertical-align: middle;
-	width:120px;
-	height:68px;
+	width: 150px;
+	height: 86px;
 	background: #ccc 50% 50% no-repeat;    
-	background-size: auto 173px;              
+	@include background-size(auto 160px);           
 	position: relative;
 	float: none;
 	margin: 24px 0px;
@@ -177,8 +187,8 @@
 		overflow:hidden; 
 		@include backface-visibility(hidden); 
 		&:before {
-			width: 173px;
-			height: 173px;
+			width: 160px;
+			height: 160px;
 			content: '';
 			position: absolute;
 			background: inherit;
@@ -193,14 +203,14 @@
 		z-index:-1;
 		@include transform(rotate(60deg));
 		&:before {
-			transform: rotate(-60deg) translate(-87px, 0px);  
-			transform-origin: 0 0;
+			@include transform(rotate(-60deg) translate(-85px, 0px));  
+			@include transform-origin(0,0);
 		}     
 	}
 	.corner-2 {
 		@include transform(rotate(-60deg));
 		&:before {
-			transform: rotate(60deg) translate(-48px, -11px); 
+			@include transform(rotate(60deg) translate(-48px, -11px)); 
 			bottom:0;
 		}   
 	}
@@ -208,7 +218,26 @@
 	.inner {   
 		color:#eee;
 	}
-
+	a {
+		font-size: 18px;
+		word-spacing: 1px;
+		-moz-transition: none 1s;
+		-o-transition: none 1s;
+		-webkit-transition: none 1s;
+		transition: none 1s;
+		background-color: whitesmoke;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		-moz-background-size: auto 220px;
+		-o-background-size: auto 220px;
+		-webkit-background-size: auto 220px;
+		background-size: auto 220px;
+		text-align: center;
+		display: block;
+		border: none;
+		color: #fff;
+		-webkit-backface-visibility: hidden;
+	}
 	&.hex-1 {
 		background: #74cddb;
 	}
@@ -220,4 +249,150 @@
 	&.hex-3 {
 		background: #ddd;
 	}
+}*/
+
+/* HEXAGON STARTS HERE */
+.hex {
+	width:150px;
+	height:86px;
+	background-color: #ccc;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;			
+	-webkit-background-size: auto 173px;							
+	-moz-background-size: auto 173px;							
+	-ms-background-size: auto 173px;							
+	-o-background-size: auto 173px;							
+	position: relative;
+	float:left;
+	margin:25px 5px;
+	text-align:center;
+	zoom:1;
 }
+		
+	.hex.hex-gap {
+		margin-left: 86px;
+	}
+	
+	.hex a {
+		display:block;
+		width: 100%;
+		height:100%;
+		text-indent:-9999em;
+		position:absolute;
+		top:0;
+		left:0;
+	}
+
+	.hex .corner-1,
+	.hex .corner-2 {
+		position: absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		background: inherit;								
+		z-index:-2;						
+		overflow:hidden;
+		-webkit-backface-visibility: hidden;
+		-moz-backface-visibility: hidden;
+		-ms-backface-visibility: hidden;
+		-o-backface-visibility: hidden;			
+		backface-visibility: hidden;			
+	}
+	
+	.hex .corner-1 {
+		z-index:-1;
+		-webkit-transform: rotate(60deg);
+		-moz-transform: rotate(60deg);
+		-ms-transform: rotate(60deg);
+		-o-transform: rotate(60deg);
+		transform: rotate(60deg);
+	}
+	
+	.hex .corner-2 {
+		-webkit-transform: rotate(-60deg);
+		-moz-transform: rotate(-60deg);
+		-ms-transform: rotate(-60deg);
+		-o-transform: rotate(-60deg);
+		transform: rotate(-60deg);
+	}
+	
+	.hex .corner-1:before,
+	.hex .corner-2:before {
+		width: 173px;
+		height:	173px;
+	  content: '';
+	  position: absolute;
+	  background: inherit;
+	  top:0;
+	  left: 0;
+	  z-index: 1;
+	  background: inherit;
+	  background-repeat:no-repeat;
+		-webkit-backface-visibility: hidden;
+		-moz-backface-visibility: hidden;
+		-ms-backface-visibility: hidden;
+		-o-backface-visibility: hidden;	
+		backface-visibility: hidden;				  
+	}			
+	
+
+	.hex .corner-1:before {
+		-webkit-transform: rotate(-60deg) translate(-87px, 0px);
+		-moz-transform: rotate(-60deg) translate(-87px, 0px);
+		-ms-transform: rotate(-60deg) translate(-87px, 0px);
+		-o-transform: rotate(-60deg) translate(-87px, 0px);
+		transform: rotate(-60deg) translate(-87px, 0px);	
+	  -webkit-transform-origin: 0 0;
+	  -moz-transform-origin: 0 0;
+	  -ms-transform-origin: 0 0;
+	  -o-transform-origin: 0 0;
+	  transform-origin: 0 0;
+	}			
+	
+	.hex .corner-2:before {
+		-webkit-transform: rotate(60deg) translate(-48px, -11px);
+		-moz-transform: rotate(60deg) translate(-48px, -11px);
+		-ms-transform: rotate(60deg) translate(-48px, -11px);
+		-o-transform: rotate(60deg) translate(-48px, -11px);
+		transform: rotate(60deg) translate(-48px, -11px);	
+		bottom:0;
+	}		
+
+
+	
+	/* Custom styles*/
+	.hex .inner {		
+		color:#eee;
+	}
+	
+	.hex h4 {
+		font-family: 'Josefin Sans', sans-serif;		
+		margin:0;			
+	}
+	
+	.hex hr {
+		border:0;
+		border-top:1px solid #eee;
+		width:60%;
+		margin:15px auto;
+	}
+	
+	.hex p {
+		font-size:16px;
+		font-family: 'Kotta One', serif;
+		width:80%;
+		margin:0 auto;
+	}
+
+	.hex.hex-1 {
+		background: #74cddb;
+	}
+	
+	.hex.hex-2 {
+		background: #f5c53c;
+	}
+	
+	.hex.hex-3 {
+		background: #80b971;
+	}

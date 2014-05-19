@@ -103,9 +103,9 @@ $mutedBlack: #333;
 }
 #homePage {
 	header {
-		background: #8DE1F8;
+		background: url(/images/homebg.jpg) center 0;
 		h1, h2 {
-			color: #132335;
+			color: #fff;
 			text-align: center;
 			font-weight: 400;
 		}
@@ -121,6 +121,16 @@ $mutedBlack: #333;
 			margin: 0 auto;
 		}
 	}
+	section.bordered {
+		border: 6px solid #eee;
+		h2 {
+			text-align: center;
+			font-size: 1.6em;
+		}
+	}
+	.carousel {
+		border: 5px solid #eee;
+	}
 	#owl-demo .item{
 	  margin: 3px;
 	}
@@ -128,5 +138,28 @@ $mutedBlack: #333;
 	  display: block;
 	  width: 100%;
 	  height: auto;
+	}
+	#your-subjects {
+		ul {
+			list-style: none;
+			margin-left: 0;
+			li {
+				border-bottom: 1px solid #eee;
+				a {
+					font-size: 1.4em;
+					padding: 0.4em 0;
+					display: block;
+				}
+			}
+		}
+	}
+
+}
+.subject-group {
+	.hex-item {
+		margin-right: 1px;
+		.hex {
+			margin-bottom: 4em;
+		}
 	}
 }
