@@ -15,42 +15,78 @@
 	h3 {
 		margin-bottom: 0;
 	}
-
+	.hex-item{
+		margin-bottom: 0;
+		.hex {
+			margin-bottom: 0;
+		} 
+	}
 	// Horizontal item list
 	&.horizontal {
-		height: 200px;
 		overflow: hidden;
 		li {
-			height: 200px;
 			margin-right: 1em;
 			float: left;
 			width: 30%;
 		}
 		&.simple {
-			height: 264px;
 			li {
 				border-bottom: none;
 				.hex {
 					width: 101px;
 					height: 57px;
+					margin-bottom: 3em;
 				}
 				width: 20%;
 			}
+		}
+	}
+	.info {
+		span {
+			display: block;
 		}
 	}
 }
 .carousel {
 	position: relative;
 	border-radius: 6px;
-
+	height: 22em; 
+	margin-bottom: 3em; 
+	overflow: hidden; 
+	background: #eee;
+	.prev, .next {
+		position: absolute;
+		display: none;
+		top: 47%;
+		color: #fff;
+		font-size: 3em;
+		border-radius: 40px;
+		background: rgba(235, 112, 30, 0.8);
+		i {
+			position: relative;
+			top: 2px;
+		}
+	}
+	.prev {
+		left: 0.2em;
+	}
+	.next {
+		right: 0.2em;
+	}
+	&:hover {
+		.prev, .next {
+			display: block;
+		}
+	}
 	.caption {
 		position: absolute;
 		bottom: 8px;
 		left: 0;
 		background: rgba(255,255,255,0.95);
-		width: 80%;
+		width: 100%;
 		padding: 1em;
 		border-radius: 0 6px 6px 0;
+
 		h1 {
 			font-size: 2em;
 			margin: 0;

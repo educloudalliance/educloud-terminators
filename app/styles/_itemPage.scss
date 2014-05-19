@@ -11,36 +11,37 @@
 		background: #DBDBDB;
 	}
 	header {
-		padding: 3em 0 5em;
-		margin-bottom: 3em;
+		padding: 3em 0 3em;
 		h1 {
-			color: #777;
 			margin-bottom: 0;
 		}
 		.rating, .specs {
-			color: #777;
+			color: #fff;
 		}
 	}
-
-	.toprow {
+	.item-picture {
+		background: url("http://upload.wikimedia.org/wikipedia/commons/2/24/Gorilla_gorilla11.jpg"); 
+		height: 23em;
+		border-radius: 3px;
+		margin-bottom: 2em;
+	}
+	.ingress {
 		//margin-bottom: 2em;
-		padding-bottom: 2em;
-		.item-picture {
-			background: url("http://upload.wikimedia.org/wikipedia/commons/2/24/Gorilla_gorilla11.jpg"); 
-			height: 23em;
-			border-radius: 3px;
-			margin-bottom: 2em;
-		}
+		padding-bottom: 1em;
+
 		ul {
 			padding: 1em;
 			border-radius: 3px;
 			list-style-type: none;
 			margin-left: 0;
-			background: lighten($blue, 30%);
+			background: #D9F1FA;
 			border: 1px solid #fff;
 			li {
 				color: #888;
 			}
+		}
+		p {
+			font-size: 1.2em;
 		}
 	}
 	aside {
