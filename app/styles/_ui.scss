@@ -39,6 +39,33 @@
 		}
 	}
 }
+.carousel {
+	position: relative;
+	border-radius: 6px;
+
+	.caption {
+		position: absolute;
+		bottom: 8px;
+		left: 0;
+		background: rgba(255,255,255,0.95);
+		width: 80%;
+		padding: 1em;
+		border-radius: 0 6px 6px 0;
+		h1 {
+			font-size: 2em;
+			margin: 0;
+		}
+		.info {
+			margin-bottom: 0.5em;
+			span {
+
+			}
+		}
+		p {
+			margin-bottom: 0;
+		}
+	}
+}
 .post-list {
 	list-style: none;
 	margin-left: 0;
@@ -52,6 +79,9 @@
 		}
 		i {
 			font-size: 2em;
+		}
+		&:last-child {
+			border-bottom: 0;
 		}
 	}
 	img {
@@ -72,6 +102,18 @@
 	}
 }
 
+.hex-item {
+	//float: left;
+	display: block;
+	float: left;
+	text-align: center;
+	margin-bottom: 2em;
+	max-width: 120px;
+	margin-right: 0.3em;
+	.hex {
+		margin-bottom: 3em; 
+	} 
+}
 
 .hex {
 	display: inline-block;

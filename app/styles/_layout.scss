@@ -24,9 +24,12 @@ header {
 	h1 {
 		margin-top: -0.1em;
 	}
-	&.row .back {
+	.back {
 		i {
 			font-size: 5em;
 		}
+	}
+	.search {
+		margin-top: 1em;
 	}
 }

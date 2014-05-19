@@ -32,9 +32,9 @@ angular
         url: '/music',
         templateUrl: 'views/music.html',
     })
-    .state('geometry', {
-        url: '/geometry',
-        templateUrl: 'views/geometry.html',
+    .state('music-theory', {
+        url: '/music-theory',
+        templateUrl: 'views/music-theory.html',
     })
     .state('account', {
         url: '/account',
