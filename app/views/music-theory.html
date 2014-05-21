@@ -1,11 +1,11 @@
 <div ng-controller="SubjectCtrl" id="topicPage">
 	<header>
-		<img class="header-image light" src="images/notes_130.jpg"  height="130">
+		<img class="header-image light" src="images/subjects/music-theory.jpg">
 		<div class="small-1 columns back">
 			<a href="#/maths"><i class="icon-arrow-left"></i></a>
 		</div>
 		<div class="small-11 columns">
-			<div class="breadcrumb"><a href="#/subjects">Subjects</a><i class="icon-arrow-right"></i><a href="#/music">Music</a></div>
+			<div class="breadcrumb"><a href="#/home">Subjects</a><i class="icon-arrow-right"></i><a href="#/music">Music</a></div>
 			<h1>Music theory</h1>
 		</div>
 
@@ -46,47 +46,78 @@
 			</section>
 			<section>
 				<h4>Price</h4>
-				<div class="range-slider" data-slider>
+				<div class="price-label" style="overflow: hidden;">
+					<label style="float: left">0</label>
+					<label style="float: right">65€</label>
+				</div>
+				<div class="range-slider" data-slider style="margin-top: 0">
 				  <span class="range-slider-handle"></span>
+				  <span class="range-slider-handle" style="right: 0;"></span>
 				  <span class="range-slider-active-segment"></span>
 				  <input type="hidden">
 				</div>
-				<input type="checkbox" ng-model="query.price">Free
+				<input type="checkbox"><label>Free</label>
 			</section>
 			<section>
-				<h4>Licence</h4>
-				<ul>
-					<li>Can use, modify and share freely</li>
-					<li>Can modify</li>
-					<li>Can modify</li>
-				</ul>
+				<h4>Device&Platform</h4>
+				<p>Suitable for</p>
+				<ul class="ui-list">
+		   			<li><input type="checkbox" name="purpose" checked><label>PC</label></li>
+			      	<li><input type="checkbox" name="purpose"><label>Tablets</label></li>
+			      	<li><input type="checkbox" name="purpose"><label>iPad</label></li>
+			      	<li><input type="checkbox" name="purpose"><label>Android</label></li>
+			      	<li><input type="checkbox" name="purpose"><label>Windows Phone</label></li>
+			      	<li><input type="checkbox" name="purpose"><label>iPhone</label></li>
+			      	<li><input type="checkbox" name="purpose"><label>Does not need plugins</label></li>
+	      		</ul>
+	      		<p>Compatible with following LMS:</p>
+	      		<ul class="ui-list">
+		   			<li><input type="checkbox" name="purpose" checked><label>Moodle</label></li>
+			      	<li><input type="checkbox" name="purpose"><label>Edmodo</label></li>
+			      	<li><input type="checkbox" name="purpose"><label>Blackboard</label></li>
+			      	<li><input type="checkbox" name="purpose"><label>Itslearning</label></li>
+			      	<li><input type="checkbox" name="purpose"><label>Dreamschool</label></li>
+			      	<li><input type="checkbox" name="purpose"><label>Eliademy</label></li>
+	      		</ul>
+			</section>
+			<section>
+				<h4>Purpose</h4>
+				<p>Filter according what the licence permits</p>
+				<ul class="ui-list">
+		   			<li><input type="checkbox" name="purpose" checked><label>To use</label></li>
+			      	<li><input type="checkbox" name="purpose"><label>To modify</label></li>
+			      	<li><input type="checkbox" name="purpose"><label>To share</label></li>
+			      	<li><input type="checkbox" name="purpose"><label>To resell</label></li>
+			      	<li><input type="checkbox" name="purpose"><label>Everything possible</label></li>
+	      		</ul>
+	      	</section>
 		</div>
 		<div class="small-9 columns" id="searchResults">
 			<ul class="item-list detailed blocks">
 				<li ng-repeat="item in items | filter:query:price">
 					<div class="medium-3 columns">
 						<div class="item-image">
-	        		<img src="{{item.image}}">
-	        	</div>
-	        </div>
-	        <div class="medium-9 columns">
-	        	<h3>{{item.name}}</h3>
-	        	<div class="info">
+			        		<img src="{{item.image}}">
+			        	</div>
+			        </div>
+			        <div class="medium-9 columns">
+			        	<h3>{{item.name}}</h3>
+			        	<div class="info">
 							<span class="author teacher">{{item.author}}</span>
 						</div>
 						<p>{{item.description_short}}</p>
-	        </div>
-	        <footer>
-							<span class="rating">
-								<i class="icon-star"></i>
-								<i class="icon-star"></i>
-								<i class="icon-star"></i>
-								<i class="icon-star"></i>
-								<i class="icon-star2"></i>
-							</span>
-							<span class="price">{{item.price}}</span>
+			        </div>
+			        <footer>
+						<span class="rating">
+							<i class="icon-star"></i>
+							<i class="icon-star"></i>
+							<i class="icon-star"></i>
+							<i class="icon-star"></i>
+							<i class="icon-star2"></i>
+						</span>
+						<span class="price">{{item.price}}</span>
 					</footer>
-	      </li>
+	     		</li>
 			</ul>
 		</div>
 	</div>

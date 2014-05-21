@@ -2,6 +2,9 @@
 	header {
 		background: url(/images/homebg.jpg) center 0;
 		padding: 1em;
+		h1 {
+			margin-bottom: 0;
+		}
 		h1, h2 {
 			color: #fff;
 			text-align: center;
@@ -52,6 +55,9 @@
 	}
 	.carousel {
 		border: 5px solid #eee;
+		.prev, .next {
+			top: 27%;
+		}
 	}
 	#owl-demo .item{
 	  margin: 3px;
@@ -79,7 +85,7 @@
 }
 .subject-group {
 	.hex-item {
-		margin-right: 1px;
+		margin-right: 1em;
 		.hex {
 			margin-bottom: 4em;
 		}

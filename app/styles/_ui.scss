@@ -5,7 +5,14 @@ i {
 .rating i {
 	margin-right: 0;
 }
+.tabs-content {
+	margin-bottom: 0;
+}
 // Lists
+.ui-list {
+	margin-left: 0;
+	list-style: none;
+}
 .item-list {
 	list-style: none;
 	margin-left: 0;
@@ -14,7 +21,8 @@ i {
 		border-bottom: 1px dotted #ddd;
 		overflow: hidden;
 		&:last-child {
-			border-bottom: 0;
+			border-bottom: 0 !important;
+			border-right: 0 !important;
 		}
 	}
 	&.blocks {
@@ -99,10 +107,14 @@ i {
 .carousel {
 	position: relative;
 	border-radius: 6px;
-	height: 22em; 
+	//height: 22em; 
 	margin-bottom: 3em; 
 	overflow: hidden; 
 	background: #eee;
+
+	.image {
+		position: relative;
+	}
 	.prev, .next {
 		position: absolute;
 		display: none;
@@ -127,6 +139,7 @@ i {
 			display: block;
 		}
 	}
+
 	.caption {
 		
 		background: rgba(255,255,255,0.95);
@@ -147,6 +160,9 @@ i {
 		p {
 			margin-bottom: 0;
 		}
+	}
+	i {
+		margin-right: 0;
 	}
 }
 .post-list {
@@ -183,6 +199,15 @@ i {
 	}
 }
 
+#filters {
+	h4 {
+		border-bottom: 1px solid #ccc;
+	}
+	p {
+		font-size: 0.9em;
+	}
+}
+
 .hex-item {
 	//float: left;
 	display: block;
@@ -191,100 +216,15 @@ i {
 	margin-bottom: 2em;
 	max-width: 150px;
 	margin-right: 0.3em;
+	&:hover {
+		h3 {
+			font-weight: 400;
+		}
+	}
 	.hex {
 		margin-bottom: 3em; 
 	} 
 }
-/*
-.hex {
-	display: inline-block;
-	vertical-align: middle;
-	width: 150px;
-	height: 86px;
-	background: #ccc 50% 50% no-repeat;    
-	@include background-size(auto 160px);           
-	position: relative;
-	float: none;
-	margin: 24px 0px;
-	text-align:center;
-	zoom:1;
-	.hex-gap {
-		margin-left: 86px;
-	}
-	.corner-1, .corner-2 {
-		position: absolute;
-		top:0;
-		left:0;
-		width:100%;
-		height:100%;
-		background: inherit;                
-		z-index:-2;
-		overflow:hidden; 
-		@include backface-visibility(hidden); 
-		&:before {
-			width: 160px;
-			height: 160px;
-			content: '';
-			position: absolute;
-			background: inherit;
-			top:0; left: 0;
-			z-index: 1;
-			background: inherit;
-			background-repeat:no-repeat;
-			@include backface-visibility(hidden); 
-		}
-	}
-	.corner-1 {
-		z-index:-1;
-		@include transform(rotate(60deg));
-		&:before {
-			@include transform(rotate(-60deg) translate(-85px, 0px));  
-			@include transform-origin(0,0);
-		}     
-	}
-	.corner-2 {
-		@include transform(rotate(-60deg));
-		&:before {
-			@include transform(rotate(60deg) translate(-48px, -11px)); 
-			bottom:0;
-		}   
-	}
-
-	.inner {   
-		color:#eee;
-	}
-	a {
-		font-size: 18px;
-		word-spacing: 1px;
-		-moz-transition: none 1s;
-		-o-transition: none 1s;
-		-webkit-transition: none 1s;
-		transition: none 1s;
-		background-color: whitesmoke;
-		background-repeat: no-repeat;
-		background-position: 50% 50%;
-		-moz-background-size: auto 220px;
-		-o-background-size: auto 220px;
-		-webkit-background-size: auto 220px;
-		background-size: auto 220px;
-		text-align: center;
-		display: block;
-		border: none;
-		color: #fff;
-		-webkit-backface-visibility: hidden;
-	}
-	&.hex-1 {
-		background: #74cddb;
-	}
-
-	&.hex-2 {
-		background: #f5c53c;
-	}
-
-	&.hex-3 {
-		background: #ddd;
-	}
-}*/
 
 /* HEXAGON STARTS HERE */
 .hex {

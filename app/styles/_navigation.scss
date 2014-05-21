@@ -25,7 +25,7 @@ $mutedBlack: #333;
 	overflow: hidden;
 	padding: 0.3em;
 	position: relative;
-	margin-left: 1em;
+	padding-left: 1em;
 	ul {
 		float: right;
 		list-style: none;
@@ -35,13 +35,16 @@ $mutedBlack: #333;
 			margin-right: 1em;
 			float: left;
 			i {
+				position: relative;
 				margin-right: 0;
+				top: 0.2em;
 			}
 		}
 		&.nav {
 			font-weight: 300;
 		}
 	}
+
 
 }
 
@@ -92,6 +95,9 @@ $mutedBlack: #333;
 }
 .tabs dd > a {
 	background: #fff;
+	&:hover {
+		background: #E0F6FF;
+	}
 }
 .tabs dd.active a {
 	background: #FFDE98 !important;

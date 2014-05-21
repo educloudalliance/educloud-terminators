@@ -126,6 +126,33 @@
 								</footer>
 				      </li>							
 						</ul>
+						<h2>Most commented</h2>
+						<ul class="item-list horizontal simple blocks"> 
+							<li ng-repeat="item in items | limitTo: 3">
+								<div class="medium-3 columns">
+									<div class="item-image">
+				        		<img src="{{item.image}}">
+				        	</div>
+				        </div>
+				        <div class="medium-9 columns">
+				        	<h3>{{item.name}}</h3>
+				        	<div class="info">
+										<span class="author teacher">{{item.author}}</span>
+									</div>
+									<p>{{item.description_short}}</p>
+				        </div>
+				        <footer>
+										<span class="rating">
+											<i class="icon-star"></i>
+											<i class="icon-star"></i>
+											<i class="icon-star"></i>
+											<i class="icon-star"></i>
+											<i class="icon-star2"></i>
+										</span>
+										<span class="price">{{item.price}}</span>
+								</footer>
+				      </li>							
+						</ul>
 					</div>
 				</div>
 				<div class="medium-4 columns right-col">
