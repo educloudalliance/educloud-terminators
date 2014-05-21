@@ -17,6 +17,7 @@ $mutedBlack: #333;
 @import 'ui';
 
 // Page specific css
+@import 'homePage';
 @import 'subjectPage';
 @import 'itemPage';
 
@@ -98,68 +99,6 @@ $mutedBlack: #333;
 			&.humanist ul {
 				border-color: $mutedBlack;
 			}
-		}
-	}
-}
-#homePage {
-	header {
-		background: url(/images/homebg.jpg) center 0;
-		h1, h2 {
-			color: #fff;
-			text-align: center;
-			font-weight: 400;
-		}
-		h2 {
-			font-size: 1.2em;
-			margin-bottom: 2em;
-		}
-		.search {
-			display: block;
-			padding: 1em;
-			border-radius: 0.5em;
-			width: 30em;
-			margin: 0 auto;
-		}
-	}
-	section.bordered {
-		border: 6px solid #eee;
-		h2 {
-			text-align: center;
-			font-size: 1.6em;
-		}
-	}
-	.carousel {
-		border: 5px solid #eee;
-	}
-	#owl-demo .item{
-	  margin: 3px;
-	}
-	#owl-demo .item img{
-	  display: block;
-	  width: 100%;
-	  height: auto;
-	}
-	#your-subjects {
-		ul {
-			list-style: none;
-			margin-left: 0;
-			li {
-				border-bottom: 1px solid #eee;
-				a {
-					font-size: 1.4em;
-					padding: 0.4em 0;
-					display: block;
-				}
-			}
-		}
-	}
-
-}
-.subject-group {
-	.hex-item {
-		margin-right: 1px;
-		.hex {
-			margin-bottom: 4em;
 		}
 	}
 }

@@ -1,218 +1,94 @@
-<div ng-controller="SubjectCtrl" id="subjectPage" class="topic">
-	<header class="row">
+<div ng-controller="SubjectCtrl" id="topicPage">
+	<header>
 		<img class="header-image light" src="images/notes_130.jpg"  height="130">
 		<div class="small-1 columns back">
 			<a href="#/maths"><i class="icon-arrow-left"></i></a>
 		</div>
-		<div class="small-8 columns">
+		<div class="small-11 columns">
 			<div class="breadcrumb"><a href="#/subjects">Subjects</a><i class="icon-arrow-right"></i><a href="#/music">Music</a></div>
 			<h1>Music theory</h1>
 		</div>
-		<div class="small-3 columns">
-			<input type="text" placeholder="Search within Music theory..">
-		</div>
+
 	</header>
-	<div class="row">
-		<div id="filters">
-			<div class="row">
-				<div class="medium-4 columns">
-					<h4>Suitable for grade</h4>
-					<div class="button-bar">
-				     <ul class="button-group round">
-						  <li><a href="#" class="button">1</a></li>
-						  <li><a href="#" class="button">2</a></li>
-						  <li><a href="#" class="button">3</a></li>
-						  <li><a href="#" class="button">4</a></li>
-						  <li><a href="#" class="button">5</a></li>
-						  <li><a href="#" class="button">6</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="medium-4 columns">
-					<h4>Type</h4>
-					<select>
-						<option>All</option>
-						<option>Games</option>
-						<option>Tools</option>
-						<option>Audio</option>
-						<option>Pictures</option>
-						<option>Scores</option>
-						<option>Animations</option>
-						<option>Videos</option>
-						<option>Courses</option>
-					</select>
-				</div>
-				<div class="medium-4 columns">
-					<h4>Price</h4>
-					<div class="range-slider" data-slider>
-					  <span class="range-slider-handle"></span>
-					  <span class="range-slider-active-segment"></span>
-					  <input type="hidden">
-					</div>
-					<input type="checkbox">Free
 
-				</div>
-			</div>
-  	</div>
 
-	</div>
-	<div class="row">
-		<ul class="item-list detailed">
-			<li class="medium-4 columns">
-				<div class="medium-3 columns">
-					<a href="#/item" class="hex-item">
-						<div class="hex">   
-							<div class="inner">
-							</div>    
-							<div class="corner-1"></div>
-							<div class="corner-2"></div>
+	<div>
+		<div class="small-3 columns" id="filters">
+			<input type="text" placeholder="Search within Music theory..">
+			<section>
+				<h4>Suitable for grade</h4>
+				<div class="button-bar">
+			     <ul class="button-group round">
+					  <li><a href="#" class="button">1</a></li>
+					  <li><a href="#" class="button">2</a></li>
+					  <li><a href="#" class="button">3</a></li>
+					  <li><a href="#" class="button">4</a></li>
+					  <li><a href="#" class="button">5</a></li>
+					  <li><a href="#" class="button">6</a></li>
+					</ul>
+				</div>
+			</section>
+			<section>
+				<h4>Type</h4>
+				<select ng-model="query.type">
+					<option value="all">All</option>
+					<option value="game">Games</option>
+					<option value="application">Apps</option>
+					<option value="audio">Audio</option>
+					<option value="picture">Pictures</option>
+					<option value="score">Scores</option>
+					<option value="animation">Animations</option>
+					<option value="video">Videos</option>
+					<option value="course">Courses</option>
+					<option value="lesson">Lessons</option>
+					<option value="website">Websites</option>
+				</select>
+			</section>
+			<section>
+				<h4>Price</h4>
+				<div class="range-slider" data-slider>
+				  <span class="range-slider-handle"></span>
+				  <span class="range-slider-active-segment"></span>
+				  <input type="hidden">
+				</div>
+				<input type="checkbox" ng-model="query.price">Free
+			</section>
+			<section>
+				<h4>Licence</h4>
+				<ul>
+					<li>Can use, modify and share freely</li>
+					<li>Can modify</li>
+					<li>Can modify</li>
+				</ul>
+		</div>
+		<div class="small-9 columns" id="searchResults">
+			<ul class="item-list detailed blocks">
+				<li ng-repeat="item in items | filter:query:price">
+					<div class="medium-3 columns">
+						<div class="item-image">
+	        		<img src="{{item.image}}">
+	        	</div>
+	        </div>
+	        <div class="medium-9 columns">
+	        	<h3>{{item.name}}</h3>
+	        	<div class="info">
+							<span class="author teacher">{{item.author}}</span>
 						</div>
-					</a>
-				</div>
-				<div class="medium-9 columns">
-					<h3>Score package for beginners</h3>
-					<span class="author teacher">Hanna E.</span>
-					<p>10 scores perfect for kids to learn playing by notes.</p>
-				</div>
-			</li>
-			<li class="medium-4 columns">
-				<div class="medium-3 columns">
-					<a href="#/music" class="hex-item">
-						<div class="hex">   
-							<div class="inner">
-							</div>    
-							<div class="corner-1"></div>
-							<div class="corner-2"></div>
-						</div>
-					</a>
-				</div>
-				<div class="medium-9 columns">
-					<h3>Nuottila 2012</h3>
-					<span class="author">Nuottila</span>
-					<p>At Nuottila web site you're able to practice....</p>
-				</div>
-			</li>
-			<li class="medium-4 columns">
-				<div class="medium-3 columns">
-					<a href="#/music" class="hex-item">
-						<div class="hex">   
-							<div class="inner">
-							</div>    
-							<div class="corner-1"></div>
-							<div class="corner-2"></div>
-						</div>
-					</a>
-				</div>
-				<div class="medium-9 columns">
-					<h3>Nota</h3>
-					<span class="author company">All Forces</span>
-					<span class="type">Program, iOS</span>
-					<p>Nota is a set of indispensable tools for musicians at any level. It has a piano chord and scale browser, a piano and staff note locator, ...</p>
-				</div>
-			</li>
-			<li class="medium-4 columns">
-				<div class="medium-3 columns">
-					<a href="#/music" class="hex-item">
-						<div class="hex">   
-							<div class="inner">
-							</div>    
-							<div class="corner-1"></div>
-							<div class="corner-2"></div>
-						</div>
-					</a>
-				</div>
-				<div class="medium-9 columns">
-					<h3>Some item</h3>
-					<span class="author">Publisher</span>
-					<p>Asdasdasd</p>
-				</div>
-			</li>
-			<li class="medium-4 columns">
-				<div class="medium-3 columns">
-					<a href="#/music" class="hex-item">
-						<div class="hex">   
-							<div class="inner">
-							</div>    
-							<div class="corner-1"></div>
-							<div class="corner-2"></div>
-						</div>
-					</a>
-				</div>
-				<div class="medium-9 columns">
-					<h3>Some item</h3>
-					<span class="author">Publisher</span>
-					<p>Asdasdasd</p>
-				</div>
-			</li>
-			<li class="medium-4 columns">
-				<div class="medium-3 columns">
-					<a href="#/music" class="hex-item">
-						<div class="hex">   
-							<div class="inner">
-							</div>    
-							<div class="corner-1"></div>
-							<div class="corner-2"></div>
-						</div>
-					</a>
-				</div>
-				<div class="medium-9 columns">
-					<h3>Some item</h3>
-					<span class="author">Publisher</span>
-					<p>Asdasdasd</p>
-				</div>
-			</li>
-			<li class="medium-4 columns">
-				<div class="medium-3 columns">
-					<a href="#/music" class="hex-item">
-						<div class="hex">   
-							<div class="inner">
-							</div>    
-							<div class="corner-1"></div>
-							<div class="corner-2"></div>
-						</div>
-					</a>
-				</div>
-				<div class="medium-9 columns">
-					<h3>Some item</h3>
-					<span class="author">Publisher</span>
-					<p>Asdasdasd</p>
-				</div>
-			</li>
-			<li class="medium-4 columns">
-				<div class="medium-3 columns">
-					<a href="#/music" class="hex-item">
-						<div class="hex">   
-							<div class="inner">
-							</div>    
-							<div class="corner-1"></div>
-							<div class="corner-2"></div>
-						</div>
-					</a>
-				</div>
-				<div class="medium-9 columns">
-					<h3>Some item</h3>
-					<span class="author">Publisher</span>
-					<p>Asdasdasd</p>
-				</div>
-			</li>
-			<li class="medium-4 columns">
-				<div class="medium-3 columns">
-					<a href="#/music" class="hex-item">
-						<div class="hex">   
-							<div class="inner">
-							</div>    
-							<div class="corner-1"></div>
-							<div class="corner-2"></div>
-						</div>
-					</a>
-				</div>
-				<div class="medium-9 columns">
-					<h3>Some item</h3>
-					<span class="author">Publisher</span>
-					<p>Asdasdasd</p>
-				</div>
-			</li>
-		</ul>
+						<p>{{item.description_short}}</p>
+	        </div>
+	        <footer>
+							<span class="rating">
+								<i class="icon-star"></i>
+								<i class="icon-star"></i>
+								<i class="icon-star"></i>
+								<i class="icon-star"></i>
+								<i class="icon-star2"></i>
+							</span>
+							<span class="price">{{item.price}}</span>
+					</footer>
+	      </li>
+			</ul>
+		</div>
 	</div>
 
 </div>

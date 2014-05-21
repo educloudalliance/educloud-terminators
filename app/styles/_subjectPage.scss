@@ -22,16 +22,29 @@
 		}
 	}
 	&.topic {
-		header {
-			h1, a {
-				color: #444;
-			}
+		
+	}
+	.tabs {
+		margin-bottom: 1em !important;
+	}
+	
+}
+
+#topicPage {
+	header {
+		h1, a {
+			color: #444;
 		}
-		.item-list li {
-			height: 14em;
-			.type, .author {
-				display: block; 
-			}
-		}
+	}
+	
+	.button-group a {
+		padding: 0.9em;
+	}
+	
+	#filters, #searchResults {
+		padding-top: 1em;
+	}
+	#searchResults {
+		background: #eee;
 	}
 }

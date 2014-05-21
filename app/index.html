@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="/scripts/vendor/owl-carousel/owl-carousel/owl.carousel.css">
     <link rel="stylesheet" href="/scripts/vendor/owl-carousel/owl-carousel/owl.theme.css">
     <link rel="stylesheet" href="/styles/iconfont/style.css">
+    <script src="bower_components/masonry/dist/masonry.pkgd.min.js"></script>
 
   </head>
   <body ng-app="pilvivaylaTerminatorsApp" ng-class="{navCollapsed: !hover}">
@@ -42,17 +43,15 @@
     </nav>
     <div class="page">
       <nav class="topnav">
-        <ul class="left">
+        <ul class="left lang">
           <li><a href="#">Language:</a></li>
-          <li><a href="#">fi</a></li>
-          <li><a href="#">swe</a></li>
-          <li><a href="#" class="active" style="text-decoration: underline">en</a></li>
+          <li><a href="#" class="active">en</a></li>
         </ul>
         <ul class="right">
           <li><a href="#">Wishlist</a></li>
           <li><a href="#">Your library</a></li>
-          <li><a href="#">Your subjects</a></li>
-          <li><a href="#">Account</a></li>
+          <li><a href="#">Your subjects <i class="icon-arrow-down"></i></a></li>
+          <li><a href="#">Account <i class="icon-arrow-down"></i></a></li>
         </ul>
       </nav>
     <!-- 
@@ -135,6 +134,16 @@
 
        ga('create', 'UA-XXXXX-X');
        ga('send', 'pageview');
+    </script>
+    <script>
+    $(document).ready(function() {
+      var container = document.querySelector('#homeTab');
+      var msnry = new Masonry( container, {
+        // options
+        columnWidth: 200,
+        itemSelector: '.item'
+      });
+    }
     </script>
 
     <!--[if lt IE 9]>

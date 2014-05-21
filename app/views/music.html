@@ -39,6 +39,8 @@
 					<option>Animations</option>
 					<option>Videos</option>
 					<option>Courses</option>
+					<option>Lessons</option>
+					<option>Websites</option>
 				</select>
 			</div>
 			<div class="medium-4 columns">
@@ -70,151 +72,59 @@
 						<a href="#" class="next"><i class="icon-arrow-right"></i></a> 
 					</div>
 					<div class="row">
-						<ul class="item-list horizontal simple"> 
-							<h2>New arrivals</h2>							
-							<li class="row">
-								<div class="medium-12 columns">
-									<a href="#/music" class="hex-item">
-										<div class="hex">   
-											<div class="inner">
-											</div>    
-											<div class="corner-1"></div>
-											<div class="corner-2"></div>
-										</div>
-									</a>
-								</div>
-								<div class="medium-12 columns" popover="I appeared on mouse enter!" popover-trigger="mouseenter" >
-									<h3>The basics of Ukulele</h3>
-									<div class="info">
-										<span class="author">Rockway</span>
-										<span class="price">Free</span>
+						<h2>New arrivals</h2>
+						<ul class="item-list horizontal simple blocks"> 
+							<li ng-repeat="item in items | limitTo: 3">
+								<div class="medium-3 columns">
+									<div class="item-image">
+				        		<img src="{{item.image}}">
+				        	</div>
+				        </div>
+				        <div class="medium-9 columns">
+				        	<h3>{{item.name}}</h3>
+				        	<div class="info">
+										<span class="author teacher">{{item.author}}</span>
 									</div>
-								</div>
-							</li>
-							<li class="row">
-								<div class="medium-12 columns">
-									<a href="#/music" class="hex-item">
-										<div class="hex">   
-											<div class="inner">
-											</div>    
-											<div class="corner-1"></div>
-											<div class="corner-2"></div>
-										</div>
-									</a>
-								</div>
-								<div class="medium-12 columns">
-									<h3>GuitarBots</h3>
-									<div class="info">
-										<span class="author">Ovelin</span>
-										<span class="price">6,96€</span>
-									</div>
-								</div>
-							</li>
-							<li class="row">
-								<div class="medium-12 columns">
-									<a href="#/music" class="hex-item">
-										<div class="hex">   
-											<div class="inner">
-											</div>    
-											<div class="corner-1"></div>
-											<div class="corner-2"></div>
-										</div>
-									</a>
-								</div>
-								<div class="medium-12 columns">
-									<h3>Geogebra</h3>
-									<div class="info">
-										<span class="author">Geogebra</span>
-										<span class="price">6,96€</span>
-									</div>
-								</div>
-							</li>
-							<li class="row">
-								<div class="medium-12 columns">
-									<a href="#/music" class="hex-item">
-										<div class="hex">   
-											<div class="inner">
-											</div>    
-											<div class="corner-1"></div>
-											<div class="corner-2"></div>
-										</div>
-									</a>
-								</div>
-								<div class="medium-12 columns">
-									<h3>Some item</h3>
-									<span class="author">Publisher</span>
-								</div>
-
-							</li>
+									<p>{{item.description_short}}</p>
+				        </div>
+				        <footer>
+										<span class="rating">
+											<i class="icon-star"></i>
+											<i class="icon-star"></i>
+											<i class="icon-star"></i>
+											<i class="icon-star"></i>
+											<i class="icon-star2"></i>
+										</span>
+										<span class="price">{{item.price}}</span>
+								</footer>
+				      </li>							
 						</ul>
-					</div>
-					<div class="row">
-						<ul class="item-list horizontal simple"> 
-							<h2>Most downloaded</h2>							
-							<li class="row">
-								<div class="medium-12 columns">
-									<a href="#/music" class="hex-item">
-										<div class="hex">   
-											<div class="inner">
-											</div>    
-											<div class="corner-1"></div>
-											<div class="corner-2"></div>
-										</div>
-									</a>
-								</div>
-								<div class="medium-12 columns">
-									<h3>The basics of Ukulele</h3>
-									<span class="author">Rockway</span>
-								</div>
-							</li>
-							<li class="row">
-								<div class="medium-12 columns">
-									<a href="#/music" class="hex-item">
-										<div class="hex">   
-											<div class="inner">
-											</div>    
-											<div class="corner-1"></div>
-											<div class="corner-2"></div>
-										</div>
-									</a>
-								</div>
-								<div class="medium-12 columns">
-									<h3>GuitarBots</h3>
-									<span class="author">Ovelin</span>
-								</div>
-							</li>
-							<li class="row">
-								<div class="medium-12 columns">
-									<a href="#/music" class="hex-item">
-										<div class="hex">   
-											<div class="inner">
-											</div>    
-											<div class="corner-1"></div>
-											<div class="corner-2"></div>
-										</div>
-									</a>
-								</div>
-								<div class="medium-12 columns">
-									<h3>forScore</h3>
-									<span class="author">forScore</span>
-								</div>
-							</li>
-							<li class="row">
-								<div class="medium-12 columns">
-									<a href="#/music" class="hex-item">
-										<div class="hex">   
-											<div class="inner">
-											</div>    
-											<div class="corner-1"></div>
-											<div class="corner-2"></div>
-										</div>
-									</a>
-								</div>
-								<div class="medium-12 columns">
-									<h3>Some item</h3>
-									<span class="author">Publisher</span>
-								</div>
-							</li>
+						<h2>Most liked in the month</h2>
+						<ul class="item-list horizontal simple blocks"> 
+							<li ng-repeat="item in items | limitTo: 3">
+								<div class="medium-3 columns">
+									<div class="item-image">
+				        		<img src="{{item.image}}">
+				        	</div>
+				        </div>
+				        <div class="medium-9 columns">
+				        	<h3>{{item.name}}</h3>
+				        	<div class="info">
+										<span class="author teacher">{{item.author}}</span>
+									</div>
+									<p>{{item.description_short}}</p>
+				        </div>
+				        <footer>
+										<span class="rating">
+											<i class="icon-star"></i>
+											<i class="icon-star"></i>
+											<i class="icon-star"></i>
+											<i class="icon-star"></i>
+											<i class="icon-star2"></i>
+										</span>
+										<span class="price">{{item.price}}</span>
+								</footer>
+				      </li>							
 						</ul>
 					</div>
 				</div>
@@ -282,17 +192,35 @@
 							<li>
 								<span class="item-title">App name</span>
 								<a href="#">Excellent too but lacks group features</a>
-								<span class="stars"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span>
+								<span class="stars">
+									<i class="icon-star"></i>
+									<i class="icon-star"></i>
+									<i class="icon-star"></i>
+									<i class="icon-star"></i>
+									<i class="icon-star"></i>
+								</span>
 							</li>
 							<li>
 								<span class="item-title">App name</span>
 								<a href="#">If you want to teach your classroom guitar, use this!</a>
-								<span class="stars"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span>
-							</li>
+								<span class="stars">
+									<i class="icon-star"></i>
+									<i class="icon-star"></i>
+									<i class="icon-star"></i>
+									<i class="icon-star"></i>
+									<i class="icon-star"></i>
+								</span>							
+								</li>
 							<li>
 								<span class="item-title">App name</span>
 								<a href="#">Not worth the money.</a>
-								<span class="stars"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span>
+								<span class="stars">
+									<i class="icon-star"></i>
+									<i class="icon-star"></i>
+									<i class="icon-star2"></i>
+									<i class="icon-star2"></i>
+									<i class="icon-star2"></i>
+								</span>
 							</li>
 						</ul>
 					</section>
@@ -305,58 +233,133 @@
 				
 						<div class="small-12 columns">
 							<a href="#/music" class="hex-item">
-								<div class="hex hex-3">   
-									<div class="inner">
-									</div>    
+								<div class="hex" style="background-image: url(/images/subjects/topics/practice.jpg)">    
 									<div class="corner-1"></div>
 									<div class="corner-2"></div>    
 								</div> 
-								<h3>Practise</h3>
+								<h3>Practice</h3>
 							</a>
 							<a href="#" class="hex-item">
-								<div class="hex hex-3">   
-									<div class="inner">
-									</div>    
+								<div class="hex" style="background-image: url(/images/subjects/topics/listening.jpg)">    
 									<div class="corner-1"></div>
 									<div class="corner-2"></div>    
 								</div> 
 								<h3>Listening</h3>
 							</a>
 							<a href="#/music-theory" class="hex-item">
-								<div class="hex hex-3">   
-									<div class="inner">
-									</div>    
+								<div class="hex" style="background-image: url(/images/subjects/topics/theory.jpg)">    
 									<div class="corner-1"></div>
 									<div class="corner-2"></div>    
 								</div> 
 								<h3>Music theory</h3>
 							</a>
 							<a href="#" class="hex-item">
-								<div class="hex hex-3">   
-									<div class="inner">
-									</div>    
+								<div class="hex" style="background-image: url(/images/subjects/topics/history.jpg)">    
 									<div class="corner-1"></div>
 									<div class="corner-2"></div>    
 								</div> 
 								<h3>Music History</h3>
 							</a>
 							<a href="#" class="hex-item">
-								<div class="hex hex-3">   
-									<div class="inner">
-									</div>    
+								<div class="hex" style="background-image: url(/images/subjects/topics/creating.jpg)">    
 									<div class="corner-1"></div>
 									<div class="corner-2"></div>    
 								</div> 
 								<h3>Composing & Creating</h3>
 							</a>
+
 						</div>
 			</div>
 		</tab>
-		<tab heading="Tags">
+		<tab heading="Instruments">
+			<a href="#/music" class="hex-item">
+				<div class="hex" style="background-image: url(/images/subjects/topics/practice.jpg)">    
+					<div class="corner-1"></div>
+					<div class="corner-2"></div>    
+				</div> 
+				<h3>Guitar</h3>
+			</a>
 		</tab>
-		<tab heading="Filters">
+		<tab heading="Filter">
+					<div class="small-3 columns" id="filters">
+			<input type="text" placeholder="Search within Music theory..">
+			<section>
+				<h4>Suitable for grade</h4>
+				<div class="button-bar">
+			     <ul class="button-group round">
+					  <li><a href="#" class="button">1</a></li>
+					  <li><a href="#" class="button">2</a></li>
+					  <li><a href="#" class="button">3</a></li>
+					  <li><a href="#" class="button">4</a></li>
+					  <li><a href="#" class="button">5</a></li>
+					  <li><a href="#" class="button">6</a></li>
+					</ul>
+				</div>
+			</section>
+			<section>
+				<h4>Type</h4>
+				<select ng-model="query.type">
+					<option value="all">All</option>
+					<option value="game">Games</option>
+					<option value="application">Apps</option>
+					<option value="audio">Audio</option>
+					<option value="picture">Pictures</option>
+					<option value="score">Scores</option>
+					<option value="animation">Animations</option>
+					<option value="video">Videos</option>
+					<option value="course">Courses</option>
+					<option value="lesson">Lessons</option>
+					<option value="website">Websites</option>
+				</select>
+			</section>
+			<section>
+				<h4>Price</h4>
+				<div class="range-slider" data-slider>
+				  <span class="range-slider-handle"></span>
+				  <span class="range-slider-active-segment"></span>
+				  <input type="hidden">
+				</div>
+				<input type="checkbox" ng-model="query.price">Free
+			</section>
+			<section>
+				<h4>Licence</h4>
+				<ul>
+					<li>Can use, modify and share freely</li>
+					<li>Can modify</li>
+					<li>Can modify</li>
+				</ul>
+		</div>
+		<div class="small-9 columns" id="searchResults">
+			<ul class="item-list detailed blocks">
+				<li ng-repeat="item in items | filter:query:price">
+					<div class="medium-3 columns">
+						<div class="item-image">
+	        		<img src="{{item.image}}">
+	        	</div>
+	        </div>
+	        <div class="medium-9 columns">
+	        	<h3>{{item.name}}</h3>
+	        	<div class="info">
+							<span class="author teacher">{{item.author}}</span>
+						</div>
+						<p>{{item.description_short}}</p>
+	        </div>
+	        <footer>
+							<span class="rating">
+								<i class="icon-star"></i>
+								<i class="icon-star"></i>
+								<i class="icon-star"></i>
+								<i class="icon-star"></i>
+								<i class="icon-star2"></i>
+							</span>
+							<span class="price">{{item.price}}</span>
+					</footer>
+	      </li>
+			</ul>
+		</div>
+	</div>
 		</tab>
-		<tab heading="Forum">
+		<tab heading="Forum" class="right">
 		</tab>
 
 </div>

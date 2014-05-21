@@ -1,0 +1,87 @@
+#homePage {
+	header {
+		background: url(/images/homebg.jpg) center 0;
+		padding: 1em;
+		h1, h2 {
+			color: #fff;
+			text-align: center;
+			font-weight: 400;
+		}
+		h2 {
+			font-size: 1.2em;
+			margin-bottom: 1.5em;
+		}
+		.search {
+			display: block;
+			padding: 1em;
+			border-radius: 0.5em;
+			width: 30em;
+			margin: 0 auto;
+			margin-bottom: 1em;
+		}
+	}
+	.content {
+		padding-top: 0;
+		section {
+			float: left;
+			margin: 0 1em 1em 0;
+		}
+	}
+	.tab-content {
+
+	}
+	#homeTab {
+		padding-top: 1em;
+		background: #eee;
+		@extend .clearfix;
+	}
+	.post-list.comments li a {
+		background: #fff;
+	}
+	section.bordered {
+		border: 2px solid #E7E7E7;
+		background: #fff;
+		margin-bottom: 1em;
+		h2 {
+			margin-top: 0;
+			font-size: 1.4em;
+			color: #59D0FF;
+			margin-bottom: 0;
+			padding: 1em;
+		}
+	}
+	.carousel {
+		border: 5px solid #eee;
+	}
+	#owl-demo .item{
+	  margin: 3px;
+	}
+	#owl-demo .item img{
+	  display: block;
+	  width: 100%;
+	  height: auto;
+	}
+	#your-subjects {
+		ul {
+			list-style: none;
+			margin-left: 0;
+			li {
+				border-bottom: 1px solid #eee;
+				a {
+					font-size: 1.4em;
+					padding: 0.4em 0;
+					display: block;
+				}
+			}
+		}
+	}
+
+}
+.subject-group {
+	.hex-item {
+		margin-right: 1px;
+		.hex {
+			margin-bottom: 4em;
+		}
+	}
+}

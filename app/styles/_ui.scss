@@ -2,6 +2,9 @@
 i {
 	margin-right: 0.5em;
 }
+.rating i {
+	margin-right: 0;
+}
 // Lists
 .item-list {
 	list-style: none;
@@ -10,7 +13,44 @@ i {
 		padding: 1em 0;
 		border-bottom: 1px dotted #ddd;
 		overflow: hidden;
+		&:last-child {
+			border-bottom: 0;
+		}
 	}
+	&.blocks {
+		li {
+			height: 14em;
+			position: relative;
+			border-right: 2px solid #ddd;
+			border-bottom: 2px solid #ddd;
+			border-radius: 2px;
+			background: #fff;
+			width: 300px;
+			float: left;
+			margin-right: 0.5em;
+			h3 {
+				line-height: 1.2;
+			}
+			.type, .author {
+				display: block; 
+			}
+			footer {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				padding: 0 5%;
+				.rating {
+					i {
+						color: #ccc;
+					}
+				}
+				.price {
+					float: right;
+				}
+			}
+		}
+	}
+
 	.hex {
 		width: 76px;
 		height: 45px;
@@ -47,7 +87,6 @@ i {
 					height: 57px;
 					margin-bottom: 3em;
 				}
-				width: 20%;
 			}
 		}
 	}
@@ -89,9 +128,7 @@ i {
 		}
 	}
 	.caption {
-		position: absolute;
-		bottom: 0;
-		left: 0;
+		
 		background: rgba(255,255,255,0.95);
 		width: 100%;
 		padding: 1em;
@@ -123,9 +160,7 @@ i {
 			display: block;
 			overflow: hidden;
 		}
-		i {
-			font-size: 2em;
-		}
+
 		&:last-child {
 			border-bottom: 0;
 		}
