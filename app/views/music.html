@@ -66,12 +66,11 @@
 							<div class="info">
 								<span class="autor"><a href="#">Ovelin</a></span>
 							</div>
-							<p>This is a cool text related the product</p>
+							<p>GuitarBots makes learning to play the guitar easy, fun and motivating. The game is played with any REAL guitar (acoustic or electric)!</p>
 						</div>
 						<a href="#" class="prev"><i class="icon-arrow-left"></i></a> 
 						<a href="#" class="next"><i class="icon-arrow-right"></i></a> 
 					</div>
-					<div class="row">
 						<h2>New arrivals</h2>
 						<ul class="item-list horizontal simple blocks"> 
 							<li ng-repeat="item in items | limitTo: 3">
@@ -153,7 +152,7 @@
 								</footer>
 				      </li>							
 						</ul>
-					</div>
+					
 				</div>
 				<div class="medium-4 columns right-col">
 					<section>
@@ -287,14 +286,6 @@
 								</div> 
 								<h3>Music History</h3>
 							</a>
-							<a href="#" class="hex-item">
-								<div class="hex" style="background-image: url(/images/subjects/topics/creating.jpg)">    
-									<div class="corner-1"></div>
-									<div class="corner-2"></div>    
-								</div> 
-								<h3>Composing & Creating</h3>
-							</a>
-
 						</div>
 			</div>
 		</tab>
@@ -308,83 +299,82 @@
 			</a>
 		</tab>
 		<tab heading="Filter">
-					<div class="small-3 columns" id="filters">
-			<input type="text" placeholder="Search within Music theory..">
-			<section>
-				<h4>Suitable for grade</h4>
-				<div class="button-bar">
-			     <ul class="button-group round">
-					  <li><a href="#" class="button">1</a></li>
-					  <li><a href="#" class="button">2</a></li>
-					  <li><a href="#" class="button">3</a></li>
-					  <li><a href="#" class="button">4</a></li>
-					  <li><a href="#" class="button">5</a></li>
-					  <li><a href="#" class="button">6</a></li>
+			<div class="small-3 columns" id="filters">
+				<input type="text" placeholder="Search within Music theory..">
+				<section>
+					<h4>Suitable for grade</h4>
+					<div class="button-bar">
+				     <ul class="button-group round">
+						  <li><a href="#" class="button">1</a></li>
+						  <li><a href="#" class="button">2</a></li>
+						  <li><a href="#" class="button">3</a></li>
+						  <li><a href="#" class="button">4</a></li>
+						  <li><a href="#" class="button">5</a></li>
+						  <li><a href="#" class="button">6</a></li>
+						</ul>
+					</div>
+				</section>
+				<section>
+					<h4>Type</h4>
+					<select ng-model="query.type">
+						<option value="all">All</option>
+						<option value="game">Games</option>
+						<option value="application">Apps</option>
+						<option value="audio">Audio</option>
+						<option value="picture">Pictures</option>
+						<option value="score">Scores</option>
+						<option value="animation">Animations</option>
+						<option value="video">Videos</option>
+						<option value="course">Courses</option>
+						<option value="lesson">Lessons</option>
+						<option value="website">Websites</option>
+					</select>
+				</section>
+				<section>
+					<h4>Price</h4>
+					<div class="range-slider" data-slider>
+					  <span class="range-slider-handle"></span>
+					  <span class="range-slider-active-segment"></span>
+					  <input type="hidden">
+					</div>
+					<input type="checkbox" ng-model="query.price">Free
+				</section>
+				<section>
+					<h4>Licence</h4>
+					<ul>
+						<li>Can use, modify and share freely</li>
+						<li>Can modify</li>
+						<li>Can modify</li>
 					</ul>
-				</div>
-			</section>
-			<section>
-				<h4>Type</h4>
-				<select ng-model="query.type">
-					<option value="all">All</option>
-					<option value="game">Games</option>
-					<option value="application">Apps</option>
-					<option value="audio">Audio</option>
-					<option value="picture">Pictures</option>
-					<option value="score">Scores</option>
-					<option value="animation">Animations</option>
-					<option value="video">Videos</option>
-					<option value="course">Courses</option>
-					<option value="lesson">Lessons</option>
-					<option value="website">Websites</option>
-				</select>
-			</section>
-			<section>
-				<h4>Price</h4>
-				<div class="range-slider" data-slider>
-				  <span class="range-slider-handle"></span>
-				  <span class="range-slider-active-segment"></span>
-				  <input type="hidden">
-				</div>
-				<input type="checkbox" ng-model="query.price">Free
-			</section>
-			<section>
-				<h4>Licence</h4>
-				<ul>
-					<li>Can use, modify and share freely</li>
-					<li>Can modify</li>
-					<li>Can modify</li>
+			</div>
+			<div class="small-9 columns" id="searchResults">
+				<ul class="item-list detailed blocks">
+					<li ng-repeat="item in items | filter:query:price">
+						<div class="medium-3 columns">
+							<div class="item-image">
+		        		<img src="{{item.image}}">
+		        	</div>
+		        </div>
+		        <div class="medium-9 columns">
+		        	<h3>{{item.name}}</h3>
+		        	<div class="info">
+								<span class="author teacher">{{item.author}}</span>
+							</div>
+							<p>{{item.description_short}}</p>
+		        </div>
+		        <footer>
+								<span class="rating">
+									<i class="icon-star"></i>
+									<i class="icon-star"></i>
+									<i class="icon-star"></i>
+									<i class="icon-star"></i>
+									<i class="icon-star2"></i>
+								</span>
+								<span class="price">{{item.price}}</span>
+						</footer>
+		      </li>
 				</ul>
-		</div>
-		<div class="small-9 columns" id="searchResults">
-			<ul class="item-list detailed blocks">
-				<li ng-repeat="item in items | filter:query:price">
-					<div class="medium-3 columns">
-						<div class="item-image">
-	        		<img src="{{item.image}}">
-	        	</div>
-	        </div>
-	        <div class="medium-9 columns">
-	        	<h3>{{item.name}}</h3>
-	        	<div class="info">
-							<span class="author teacher">{{item.author}}</span>
-						</div>
-						<p>{{item.description_short}}</p>
-	        </div>
-	        <footer>
-							<span class="rating">
-								<i class="icon-star"></i>
-								<i class="icon-star"></i>
-								<i class="icon-star"></i>
-								<i class="icon-star"></i>
-								<i class="icon-star2"></i>
-							</span>
-							<span class="price">{{item.price}}</span>
-					</footer>
-	      </li>
-			</ul>
-		</div>
-	</div>
+			</div>
 		</tab>
 		<tab heading="Forum" class="right">
 		</tab>

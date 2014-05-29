@@ -49,6 +49,7 @@ $mutedBlack: #333;
 }
 
 .sidebar {
+
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -63,7 +64,7 @@ $mutedBlack: #333;
 	@include transform(translate(0px, 0));
 	-webkit-touch-callout: none;
 	@include user-select(none);
-	
+
 	.navCollapsed & {
 		width: 50px;
 	}

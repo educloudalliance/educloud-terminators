@@ -30,8 +30,8 @@
 			</section>
 			<section>
 				<h4>Type</h4>
-				<select ng-model="query.type">
-					<option value="all">All</option>
+				<select>
+					<option value="all" selected>All</option>
 					<option value="game">Games</option>
 					<option value="application">Apps</option>
 					<option value="audio">Audio</option>
@@ -62,23 +62,20 @@
 				<h4>Device&Platform</h4>
 				<p>Suitable for</p>
 				<ul class="ui-list">
-		   			<li><input type="checkbox" name="purpose" checked><label>PC</label></li>
+		   			<li><input type="checkbox" name="purpose" checked><label>PCs</label></li>
 			      	<li><input type="checkbox" name="purpose"><label>Tablets</label></li>
-			      	<li><input type="checkbox" name="purpose"><label>iPad</label></li>
-			      	<li><input type="checkbox" name="purpose"><label>Android</label></li>
-			      	<li><input type="checkbox" name="purpose"><label>Windows Phone</label></li>
-			      	<li><input type="checkbox" name="purpose"><label>iPhone</label></li>
+			      	<li><input type="checkbox" name="purpose"><label>iPad tablets</label></li>
+			      	<li><input type="checkbox" name="purpose"><label>Android tablets</label></li>
+			      	<li><input type="checkbox" name="purpose"><label>Other tablets</label></li>
+			      	<li><input type="checkbox" name="purpose"><label>Phones</label></li>
+			      	<li><input type="checkbox" name="purpose"><label>iPhones</label></li>
+			      	<li><input type="checkbox" name="purpose"><label>Android phones</label></li>
+			      	<li><input type="checkbox" name="purpose"><label>Windows Phones</label></li>
+			      	<li><input type="checkbox" name="purpose"><label>Other phones</label></li>
 			      	<li><input type="checkbox" name="purpose"><label>Does not need plugins</label></li>
 	      		</ul>
-	      		<p>Compatible with following LMS:</p>
-	      		<ul class="ui-list">
-		   			<li><input type="checkbox" name="purpose" checked><label>Moodle</label></li>
-			      	<li><input type="checkbox" name="purpose"><label>Edmodo</label></li>
-			      	<li><input type="checkbox" name="purpose"><label>Blackboard</label></li>
-			      	<li><input type="checkbox" name="purpose"><label>Itslearning</label></li>
-			      	<li><input type="checkbox" name="purpose"><label>Dreamschool</label></li>
-			      	<li><input type="checkbox" name="purpose"><label>Eliademy</label></li>
-	      		</ul>
+	      		<p>Compatible with following LMS: <i class="icon-arrow-down"></i></p>
+
 			</section>
 			<section>
 				<h4>Purpose</h4>
@@ -101,11 +98,11 @@
 			        	</div>
 			        </div>
 			        <div class="medium-9 columns">
-			        	<h3>{{item.name}}</h3>
+			        	<h3><a href="#/item">{{item.name}}</a></h3>
 			        	<div class="info">
-							<span class="author teacher">{{item.author}}</span>
-						</div>
-						<p>{{item.description_short}}</p>
+									<span class="author teacher"><a href="#">{{item.author}}</a></span>
+								</div>
+								<p>{{item.description_short}}</p>
 			        </div>
 			        <footer>
 						<span class="rating">
