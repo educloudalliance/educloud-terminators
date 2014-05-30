@@ -5,56 +5,13 @@
 			<a href="#/home"><i class="icon-arrow-left"></i></a>
 		</div>
 		<div class="small-8 columns">
-			<div class="breadcrumb"><a href="#/subjects">Subjects</a><!--<i class="icon-arrow-right"></i>--></div>
+			<div class="breadcrumb"><a href="#/subjects">Subjects</a></div>
 			<h1>Music</h1>
 		</div>
 		<div class="small-3 columns">
 			<input type="text" class="search" placeholder="Search within music..">
 		</div>
 	</header>
-	  
-	<div id="filters" ng-show="collapse">
-		<div class="row">
-			<div class="medium-4 columns">
-				<h4>Grade</h4>
-				<div class="button-bar">
-			     <ul class="button-group round">
-					  <li><a href="#" class="button">1</a></li>
-					  <li><a href="#" class="button">2</a></li>
-					  <li><a href="#" class="button">3</a></li>
-					  <li><a href="#" class="button">4</a></li>
-					  <li><a href="#" class="button">5</a></li>
-					  <li><a href="#" class="button">6</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="medium-4 columns">
-				<h4>Type</h4>
-				<select>
-					<option>Games</option>
-					<option>Tools</option>
-					<option>Audio</option>
-					<option>Pictures</option>
-					<option>Scores</option>
-					<option>Animations</option>
-					<option>Videos</option>
-					<option>Courses</option>
-					<option>Lessons</option>
-					<option>Websites</option>
-				</select>
-			</div>
-			<div class="medium-4 columns">
-				<h4>Price</h4>
-				<div class="range-slider" data-slider>
-				  <span class="range-slider-handle"></span>
-				  <span class="range-slider-active-segment"></span>
-				  <input type="hidden">
-				</div>
-				<input type="checkbox">Free
-
-			</div>
-		</div>
-  </div>
 	<tabset>
 		<tab heading="Home">
 			<div class="row">
@@ -82,7 +39,7 @@
 				        <div class="medium-9 columns">
 				        	<h3>{{item.name}}</h3>
 				        	<div class="info">
-										<span class="author teacher">{{item.author}}</span>
+										<span class="author teacher"><a href="#">{{item.author}}</a></span>
 									</div>
 									<p>{{item.description_short}}</p>
 				        </div>
@@ -210,7 +167,7 @@
 								</a>
 							</li>
 						</ul>
-						<a href="#" class="button small">Add a new discussion</a><a href="#" class="button small right">Go to the forum</a>
+						<a href="#" class="button small">Add a new discussion</a><a href="#" class="button small right">Go to the discussions</a>
 					</section>
 					<section>
 						<h3>Latest reviews</h3>
@@ -376,7 +333,7 @@
 				</ul>
 			</div>
 		</tab>
-		<tab heading="Forum" class="right">
+		<tab heading="Discussions" class="right">
 		</tab>
 
 </div>
